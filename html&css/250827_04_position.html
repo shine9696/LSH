@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position</title>
+    <style>
+      .con {
+        position: relative;
+        width: 1200px;
+        margin: 0 auto;
+        border: 1px solid;
+      }
+      .con img {
+        width: 200px;
+      }
+      .con p:last-child {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="con">
+      <p>
+        <img
+          src="https://cdn.pixabay.com/photo/2023/02/12/13/16/dog-7785066_640.jpg"
+          alt="늑대"
+        />
+      </p>
+      <p class="two">
+        <img
+          src="https://cdn.pixabay.com/photo/2023/02/12/13/16/dog-7785066_640.jpg"
+          alt="늑대"
+        />
+      </p>
+    </div>
+  </body>
+</html>
