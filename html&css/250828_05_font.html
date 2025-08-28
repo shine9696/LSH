@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/all.css" /> <!-- fontawesome 사이트참고-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search"
+    /> <!--구글아이콘 삽입할 떄 -->
+
+    <style>
+      @font-face {
+        font-family: regular;
+        src: url(./webfonts/fa-regular-400.woff2);
+      }
+      p {
+        font-family: regular;
+        font-size: 150%;
+      }
+      p::before {
+        content: "\f2bd";
+      }
+    </style>
+  </head>
+  <body>
+    <i class="fa-regular fa-house"></i> <!-- fontawesome 사이트에서 아이콘 html 가져옴-->
+    <p>&#xf015;</p> <!-- &#x를 넣어줘야 그림이 나옴-->
+     <span class="material-symbols-outlined"> search </span> <!--구글아이콘 삽입할 떄 -->
+search
+</span>
+  <p>one 하나</p>
+  <span>인라인</span>
+  </body>
+</html>

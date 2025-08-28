@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>font em과 rem</title>
+    <style>
+      html {
+        font-size: 10px;
+      }
+      div {
+        font-size: 32px; /* 32px */
+      } /*16px=12pt=1em=100%*/
+      p {
+        /*font-size: 1em;*/
+
+        /* 브라우저에서 설정한 최소값이 9px임, 그 이하는 적용x
+                          em은 부모의 크기에 영향을 받음 */
+        width: 10em; /* 32 x 10em = 320 */
+        height: 10rem; /* 다 건너뛰고 html 최상위요소의 크기를 봄*/
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>하나</p>
+    </div>
+  </body>
+</html>
