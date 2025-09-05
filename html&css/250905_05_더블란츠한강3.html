@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 2vw;
+      }
+      ul li {
+        position: relative;
+        width: 20%;
+        color: #fff;
+      }
+      ul li p {
+        width: 100%;
+        height: 100%;
+      }
+      ul li p img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      ul li h1 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        /*이조건으로 정가운데 위치 못함 transform을 배우면 가능*/
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <p>
+          <img src="https://theblanz.co.kr/images/brand-card1.jpg" alt="01" />
+        </p>
+        <h1>B</h1>
+      </li>
+      <li>
+        <p>
+          <img src="https://theblanz.co.kr/images/brand-card2.jpg" alt="02" />
+        </p>
+        <h1>L</h1>
+      </li>
+      <li>
+        <p>
+          <img src="https://theblanz.co.kr/images/brand-card3.jpg" alt="03" />
+        </p>
+        <h1>A</h1>
+      </li>
+      <li>
+        <p>
+          <img src="https://theblanz.co.kr/images/brand-card4.jpg" alt="04" />
+        </p>
+        <h1>N</h1>
+      </li>
+      <li>
+        <p>
+          <img src="https://theblanz.co.kr/images/brand-card5.jpg" alt="05" />
+        </p>
+        <h1>Z</h1>
+      </li>
+    </ul>
+  </body>
+</html>
