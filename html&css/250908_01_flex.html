@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .flex-container {
+        background: #ccc;
+        display: flex;
+        gap: 40px; /*2개의값을 주면 가로(행) 40 세로(열) 80 */
+        width: 1200px;
+        height: 800px;
+        flex-wrap: wrap;
+        align-content: space-between; /*기본:무조건 부모따라감,행이 생겼을 때, 비트윈을 쓰면 gap은 적용x*/
+        flex-direction: row-reverse; /*세로방향으로 정렬*/
+        flex-flow: column-reverse wrap;
+      }
+      .item {
+        width: 20%; /*gap이 있어서 5개가 한줄에 못옴(4개만옴)*/
+        height: 40%;
+        border: 1px solid;
+        flex-shrink: 0; /* 부모보다 차일드가 크면 큰걸 유지(작을 때 사용)*/
+        flex-grow: 1; /* 부모와 차일드 요소 같이 커짐,부모 크기가 남는다면 자식요소가 똑같이 나눠가짐*/ /*마지막 하나는 width다가짐*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+    </div>
+  </body>
+</html>
