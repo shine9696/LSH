@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        border: 1px solid;
+      }
+      p {
+        width: 100px;
+        height: 100px;
+        background: red;
+        position: absolute;
+        left: 50%; /* 얘는 부모의 기준*/
+        top: 50%;
+        transform: translate(-50%, -50%); /* p가 부모*/
+        margin: 0 auto; /* 앱솔루트가 있는상태에선 적용x */
+      }
+      div:nth-child(2) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p></p>
+    </div>
+    <div>
+      <span>인라인태그</span>
+    </div>
+  </body>
+</html>

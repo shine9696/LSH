@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+        margin: 20px 0;
+      }
+      p:nth-child(1) {
+        /* transform: translate(
+          100px,
+          50px
+        ); 기본값이 가로임, 여러개 사용하려면 가로,세로 */
+      }
+      p:nth-child(2) {
+        transform: rotate(30deg); /*기본값이 Z임(Z는 바람개비마냥 돌아감*/
+      }
+      P:nth-child(3) {
+        transform: scale(2, 0.5) translate(200px);
+      }
+      P:nth-child(4) {
+        transform: skew(
+          20deg,
+          30deg
+        ); /*기본값 가로, 여러개 사용하려면 가로,세로
+        */
+      }
+      P:nth-child(5) {
+        transform: translate(200px) scale(2, 0.5);
+      }
+      div {
+        width: 500px;
+        height: 500px;
+        border: 1px solid;
+      }
+      div p {
+        transform: scale(2); /* 중심으로부터 커진다*/
+        transform-origin: 0 0; /* 기본값, 중심으로부터 커진다*/
+      }
+      p:nth-child(7) {
+        transform: translate(100px) scale(3) rotate(20deg) skew(30deg); /*한번에 쓰는 축약형 */
+      }
+    </style>
+  </head>
+  <body>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>5</p>
+    <div>
+      <p>6</p>
+    </div>
+    <p>7</p>
+  </body>
+</html>
