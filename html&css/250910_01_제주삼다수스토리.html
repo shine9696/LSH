@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제주삼다수스토리</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      ul li {
+        display: flex;
+        height: 770px;
+        /* aspect-ratio: 1/0.5; 가로비율,세로비율 반응형. */
+      }
+      ul li:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+      ul li > div,
+      ul li > p {
+        flex: 1;
+        /* background-size: cover;  aspect-ratio를 주면 이미지 반복되서 없애줌*/
+        background-position: center;
+      }
+      ul li > div {
+        display: flex;
+        flex-direction: column; /*메인축이 세로*/
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+      }
+      ul li > div a {
+        margin-top: 20px;
+        display: inline-block; /* a태그는 인라인, 인라인블록요소로 설정해줘야 margin 적용*/
+        border: 1px solid #fff;
+        padding: 10px;
+        text-decoration: none;
+        color: #fff;
+      }
+      ul li:nth-child(3) > div a,
+      ul li:nth-child(4) > div a {
+        color: #06f;
+        border: 1px solid #06f;
+      }
+
+      ul li:nth-child(1) > p {
+        background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/sub1/bg2.png);
+      }
+      ul li:nth-child(2) > p {
+        background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/sub1/bg3.png);
+      }
+      ul li:nth-child(3) > p {
+        background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/sub1/bg4.png);
+      }
+      ul li:nth-child(4) > p {
+        background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/sub1/bg5.png);
+      }
+
+      ul li:nth-child(1) > div {
+        background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_G.png);
+      }
+      ul li:nth-child(2) > div {
+        background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_B.png);
+      }
+      ul li:nth-child(3) > div {
+        background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_W.png);
+      }
+      ul li:nth-child(4) > div {
+        background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_W.png);
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <div>
+          <h4>
+            PERMEATING<br />
+            01
+          </h4>
+          <h1>스며듦</h1>
+          <div>
+            <!-- flex를 사용하기 위해서 div 부모 만들고 p,a태그 묶음-->
+            <p>
+              제주 한라산 국립공원 내 1,450m 부근 청정 지역 위에 내린 빗물은<br />
+              약 18년에서 22년 동안 아주 천천히, 깊은 땅속으로 스며들어 맑은
+              지하수가 됩니다.
+            </p>
+            <a href="#">VIEW ALL +</a>
+          </div>
+        </div>
+        <p></p>
+        <!--공간만드는것-->
+      </li>
+      <li>
+        <div>
+          <h4>
+            PERMEATING<br />
+            01
+          </h4>
+          <h1>스며듦</h1>
+          <div>
+            <!-- flex를 사용하기 위해서 div 부모 만들고 p,a태그 묶음-->
+            <p>
+              제주 한라산 국립공원 내 1,450m 부근 청정 지역 위에 내린 빗물은<br />
+              약 18년에서 22년 동안 아주 천천히, 깊은 땅속으로 스며들어 맑은
+              지하수가 됩니다.
+            </p>
+            <a href="#">VIEW ALL +</a>
+          </div>
+        </div>
+        <p></p>
+        <!--공간만드는것-->
+      </li>
+      <li>
+        <div>
+          <h4>
+            PERMEATING<br />
+            01
+          </h4>
+          <h1>스며듦</h1>
+          <div>
+            <!-- flex를 사용하기 위해서 div 부모 만들고 p,a태그 묶음-->
+            <p>
+              제주 한라산 국립공원 내 1,450m 부근 청정 지역 위에 내린 빗물은<br />
+              약 18년에서 22년 동안 아주 천천히, 깊은 땅속으로 스며들어 맑은
+              지하수가 됩니다.
+            </p>
+            <a href="#">VIEW ALL +</a>
+          </div>
+        </div>
+        <p></p>
+        <!--공간만드는것-->
+      </li>
+      <li>
+        <div>
+          <h4>
+            PERMEATING<br />
+            01
+          </h4>
+          <h1>스며듦</h1>
+          <div>
+            <!-- flex를 사용하기 위해서 div 부모 만들고 p,a태그 묶음-->
+            <p>
+              제주 한라산 국립공원 내 1,450m 부근 청정 지역 위에 내린 빗물은<br />
+              약 18년에서 22년 동안 아주 천천히, 깊은 땅속으로 스며들어 맑은
+              지하수가 됩니다.
+            </p>
+            <a href="#">VIEW ALL +</a>
+          </div>
+        </div>
+        <p></p>
+        <!--공간만드는것-->
+      </li>
+    </ul>
+  </body>
+</html>
