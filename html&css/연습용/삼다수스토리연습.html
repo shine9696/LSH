@@ -13,8 +13,26 @@
         list-style: none;
       }
       ul li {
-        height: 700px;
+        height: 770px;
         display: flex;
+      }
+      ul li > div,
+      ul li > p {
+        flex: 1;
+      }
+      ul li > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+        text-align: center;
+      }
+
+      ul li:nth-child(1) > div {
+        background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_G.png);
+      }
+      ul li:nth-child(1) > p {
+        background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/sub1/bg2.png);
       }
     </style>
   </head>
