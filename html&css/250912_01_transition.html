@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        width: 500px;
+        height: 500px;
+        background-color: #ccc;
+        transition: 5s;
+        background-image: url(./images/photo1.jpg);
+        background-size: cover;
+      }
+      p:hover {
+        /* width: 100px; */
+        /* display: none; hover는 반드시 숫자를 줘야 정상작동,속성값이 문자된것은 시간 안먹힘<< */
+        /* opacity: 0; */
+        background-size: 120%;
+      }
+      div,
+      section {
+        width: 500px;
+        height: 500px;
+        background: red;
+        margin: 20px;
+        transition: 1s;
+      }
+      div {
+        /* opacity: 0; 안보이지만 위치엔 그대로 있음, 시간 사용 가능 */
+        /* display: none; 아예 안보임, 위치에도 사라짐, 시간 사용 불가능 */
+      }
+      div:hover {
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <div>1111111111</div>
+    <section></section>
+  </body>
+</html>
