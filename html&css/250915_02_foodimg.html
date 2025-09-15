@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .wrapper {
+        width: 800px;
+        margin: 0 auto;
+        font-size: 0;
+      }
+      .wrapper > div {
+        display: flex;
+      }
+      .wrapper .top {
+        height: 24px; /*이미지 틈이 생기면 첫번째 방법은 전부 높이를 지정해라!*/
+        font-size: 0;
+      }
+      .wrapper .menu {
+        height: 13px;
+        justify-content: space-between;
+      }
+      .wrapper .menu div {
+        display: flex;
+      }
+      .wrapper .main {
+        align-items: flex-end;
+        height: 744px;
+      }
+      .wrapper .foot {
+        height: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="top">
+        <p><img src="./images/food_img/top.gif" alt="01" /></p>
+      </div>
+      <div class="menu">
+        <p><img src="./images/food_img/food_01.gif" alt="02" /></p>
+        <div>
+          <p><img src="./images/food_img/directory.gif" alt="03" /></p>
+          <p><img src="./images/food_img/food_02.gif" alt="04" /></p>
+        </div>
+      </div>
+      <div class="main">
+        <p><img src="./images/food_img/note.gif" alt="05" /></p>
+        <p><img src="./images/food_img/image.gif" alt="06" /></p>
+        <div>
+          <p><img src="./images/food_img/number.gif" alt="07" /></p>
+          <p><img src="./images/food_img/navigation.gif" alt="08" /></p>
+        </div>
+        <p><img src="./images/food_img/page.gif" alt="09" /></p>
+      </div>
+      <div class="foot">
+        <p><img src="./images/food_img/bottom.gif" alt="10" /></p>
+      </div>
+    </div>
+  </body>
+</html>

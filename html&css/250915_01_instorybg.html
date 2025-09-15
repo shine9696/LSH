@@ -21,7 +21,7 @@
       }
 
       .wrap .top {
-        width: 1000px;
+        width: 1000px; /* 원래 .wrap에 있는 width,margin 값을 .top,pattern,main,copylight 4개의 요소에 넣어주고 기존 .wrap을 지워줘야 bg 이미지가 늘어남!!  */
         margin: 0 auto;
         display: flex;
         justify-content: flex-end;
@@ -37,11 +37,13 @@
       }
       .wrap .bg {
         background: url(./images/instory/pattern.gif);
-        height: 82px;
+        height: 82px; /*패턴을 갖고있는 부모에 넣어줘야하므로 여기에!*/
       }
-      .wrap .bg .pattern {
+      .wrap .pattern {
         width: 1000px;
         margin: 0 auto;
+        background: url(./images/instory/pattern.gif);
+        height: 82px;
       }
       .wrap .main {
         width: 1000px;
@@ -55,11 +57,13 @@
       }
       .wrap .foot {
         background: #fff;
-        height: 100px;
+        height: 100px; /*패턴을 갖고있는 부모에 넣어줘야하므로 여기에!*/
       }
       .wrap .copyright {
         width: 1000px;
         margin: 0 auto;
+        background: #fff;
+        height: 100px;
         display: flex;
         justify-content: center;
         align-items: center;
