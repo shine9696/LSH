@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>spc</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      #wrap {
+        padding: 0 54px;
+      }
+      #wrap nav {
+        height: 105px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        background: #fff;
+        left: 0; /* left 0 right 0을 줘야 상단바가 쭉 늘어남*/
+        right: 0;
+        padding: 0 54px; /*옆 여백*/
+      }
+      #wrap nav > ul {
+        display: flex;
+        gap: 40px;
+      }
+      #wrap nav > ul.menu li a {
+        font-size: 1.3vw; /*100등분해서 1.3크기만 가지겠다!*/ /*px로 주면 창이 커지든 작아지든 고정값이라 반응형 때문에 vw로 준다.*/
+        font-weight: bold;
+      }
+      #wrap nav > ul.right li:first-child a {
+        background: #eaeaea;
+        padding: 5px 10px;
+        border-radius: 100px;
+      }
+      #wrap nav > ul.right li a {
+        line-height: 105px;
+      }
+      #wrap nav > ul.right li a img {
+        vertical-align: middle;
+      }
+      #wrap .visual {
+        /* height: 410px; */
+        aspect-ratio: 1 / 0.24; /*가로비율1/세로비율0.24*/
+        background-image: url(https://spc.co.kr/files/banner/2024/07/acaeb8ad-c255-4b81-afe8-9ba5683912c6.webp);
+        background-size: cover;
+        background-position: center;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+      }
+      #wrap .visual h1 {
+        font-size: 3vw;
+        text-align: center;
+      }
+      #wrap .visual span {
+        font-size: 5vw;
+      }
+      #wrap .row1 {
+        aspect-ratio: 1 / 0.24;
+        margin: 20px 0;
+        display: flex;
+        gap: 20px;
+      }
+      #wrap .row1 li {
+        border-radius: 25px;
+        padding: 20px;
+        background-size: 100%;
+        background-position: 0 0;
+        flex: 1;
+      }
+      #wrap .row1 li a {
+        color: #fff;
+        font-family: "Rubik";
+        font-weight: bold;
+        font-size: 34px;
+      }
+      #wrap .row1 li:nth-child(1) {
+        background-image: url(https://spc.co.kr/img/front/main/history.webp);
+      }
+      #wrap .row1 li:nth-child(2) {
+        background-image: url(https://spc.co.kr/img/front/main/spcway.webp);
+        flex: 2;
+      }
+      #wrap .row1 li:nth-child(3) {
+        background-image: url(https://spc.co.kr/img/front/main/together.webp);
+      }
+      #wrap .row2 > li a {
+        color: #fff;
+        font-family: "Rubik";
+        font-weight: bold;
+      }
+      #wrap .row2 > li:nth-child(n + 2) a {
+        font-size: 34px;
+      }
+      #wrap .row2 > li:first-child a {
+        font-size: 146px;
+        text-align: center;
+      }
+      #wrap .row2,
+      #wrap .row3 {
+        aspect-ratio: 1 / 0.48;
+        display: flex;
+        gap: 20px;
+      }
+
+      #wrap .row2 > li,
+      #wrap .row3 > li {
+        flex: 1;
+      }
+      #wrap .row2 > li:first-child,
+      #wrap .row3 > li:first-child {
+        border-radius: 25px;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #wrap .row2 > li:first-child {
+        background-image: url(https://spc.co.kr/img/front/main/eat.webp);
+      }
+      #wrap .row3 > li:first-child {
+        background-image: url(https://spc.co.kr/img/front/main/news.webp);
+      }
+      #wrap .row2 > li:last-child ul,
+      #wrap .row3 > li:last-child ul {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        height: 100%; /*남는거없이 다 써라*/
+      }
+      #wrap .row2 > li:last-child ul li,
+      #wrap .row3 > li:last-child ul li {
+        flex: 1 1 40%;
+        border-radius: 25px;
+        background-size: cover;
+        background-position: 0 0;
+        padding: 20px;
+      }
+      #wrap .row2 > li:last-child ul li {
+        background-size: 110%;
+        background-position: center;
+        transition: 1s;
+      }
+      #wrap .row2 > li:last-child ul li:hover {
+        background-size: 130%;
+      }
+
+      #wrap .row2 > li:last-child ul li:nth-child(1),
+      #wrap .row3 > li:last-child ul li:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #wrap .row2 > li:last-child ul li:nth-child(2) {
+        background-image: url(https://spc.co.kr/files/brand/2024/06/2702a0a8-0b1e-42f7-a055-bd6749696c7c.png);
+      }
+      #wrap .row2 > li:last-child ul li:nth-child(3) {
+        background-image: url(https://spc.co.kr/files/brand/2024/06/d96a9ce4-a1a7-42a1-836f-fa4580f21f58.jpg);
+      }
+      #wrap .row2 > li:last-child ul li:nth-child(4) {
+        background-image: url(https://spc.co.kr/files/brand/2024/06/b59cd9b1-6acb-4deb-8d6a-7999988968bb.jpg);
+      }
+      #wrap .row3 > li:last-child ul li:nth-child(2) {
+        background-image: url(https://spc.co.kr/files/now/news/kor/2025/05/522d2804-bd2d-4592-80d4-fa2609abc630.jpg);
+      }
+      #wrap .row3 > li:last-child ul li:nth-child(3) {
+        background-image: url(https://spc.co.kr/files/now/news/kor/2025/05/aaefffc6-7c6c-4ade-b1d5-5f31d4dfe2a7.jpg);
+      }
+      #wrap .row3 > li:last-child ul li:nth-child(4) {
+        background-image: url(https://spc.co.kr/files/now/news/kor/2025/05/c54b5d3b-d810-4838-b977-e6478c64e097.jpg);
+      }
+      #wrap .row3 {
+        padding: 20px 0;
+        flex-direction: row-reverse;
+      }
+      #wrap .row3 > li:nth-child(2) ul {
+        flex-direction: row-reverse;
+      }
+      #wrap .row2 > li:last-child ul li a,
+      #wrap .row3 > li:last-child ul li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      } /* a태그가 부모 li의 전체 영역을 차지하는 블록 요소로 확장돼요.
+
+그래서 li 안에 이미지가 있다면, 이미지뿐만 아니라 그 li의 빈 영역까지도 클릭 가능 영역이 됩니다.
+
+마우스를 올리면 손가락 모양(커서 pointer) 도 기본적으로 뜹니다.*/
+      #wrap .row4 li:first-child {
+        background-image: url(https://spc.co.kr/img/front/main/careers.webp);
+      }
+      #wrap .row4 li:nth-child(2) {
+        background-image: url(https://spc.co.kr/img/front/main/contact.webp);
+      }
+      #wrap .row4 {
+        display: flex;
+        aspect-ratio: 1 / 0.48;
+        gap: 20px;
+      }
+      #wrap .row4 {
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <nav>
+        <p>
+          <a href="#"
+            ><img src="https://spc.co.kr/img/logo.svg" alt="logo"
+          /></a>
+        </p>
+        <ul class="menu">
+          <li><a href="#">ABOUT SPC</a></li>
+          <li><a href="#">HISTORY</a></li>
+          <li><a href="#">BRAND</a></li>
+          <li><a href="#">SPC NOW</a></li>
+          <li><a href="#">COMPLIANCE</a></li>
+          <li><a href="#">ESG</a></li>
+          <li><a href="#">SUPPORT</a></li>
+        </ul>
+        <ul class="right">
+          <li><a href="#">CAREERS</a></li>
+          <li>
+            <a href="#"
+              ><img
+                src="https://spc.co.kr/img/front/icon/icon_global.svg"
+                alt="icon"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+      <!--nav 끝-->
+      <div class="visual">
+        <h1>
+          일상을 맛있게 행복하게<br />
+          <span>Happiness in every bite</span>
+        </h1>
+      </div>
+      <!--visual 끝-->
+      <ul class="row1">
+        <li>
+          <a href="#">헤리티지</a>
+        </li>
+        <li>
+          <a href="#">SPC WAY</a>
+        </li>
+        <li>
+          <a href="#">ESG</a>
+        </li>
+      </ul>
+      <ul class="row2">
+        <li>
+          <a href="#">먹고<br />마시고<br />즐기자</a>
+        </li>
+        <li>
+          <ul>
+            <li>
+              <h1>Brand</h1>
+              <p>SPC그룹의 다양한 브랜드를 만나보세요.</p>
+              <p>< 01/06></p>
+            </li>
+            <li><a href="#">삼립</a></li>
+            <li><a href="#">파리바게뜨</a></li>
+            <li><a href="#">베스킨라빈스</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- row2 끝-->
+      <ul class="row3">
+        <li>
+          <a href="#"
+            >NEWS<br />
+            magazine<br />
+            sns</a
+          >
+        </li>
+        <li>
+          <ul>
+            <li>
+              <h1>spc now</h1>
+              <p>SPC그룹의 다양한 소식을 만나보세요.</p>
+              <p>< 01/03></p>
+            </li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- row3 끝-->
+      <ul class="row4">
+        <li>CAREERS</li>
+        <li>SUPPORT</li>
+      </ul>
+    </div>
+  </body>
+</html>

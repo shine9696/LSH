@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      nav {
+        height: 90px; /* 고정높이임*/
+        background: #023586;
+      }
+      nav > div {
+        width: 1420px; /*부모의 크기값을 주지 않으면 자식크기값만큼 가진다 이게 공식임
+                        그래서 높이든,너비든 크기값을 줘야하는 이유~~*/
+        height: 100%; /*부모 높이 90이니 100%를 다쓰고 그 안에서 수직정렬이 가능*/
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav > div > ul {
+        display: flex;
+        gap: 20px;
+      }
+      nav > div > ul > li {
+        position: relative;
+      }
+      nav > div > ul > li > a {
+        position: relative;
+        color: #fff;
+        vertical-align: middle;
+      }
+      nav > div > ul > li > a::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) scale(0);
+        bottom: -32px;
+        width: 100%;
+        height: 3px;
+        background: #fff;
+        padding: 0 10px;
+        transform-origin: 0 0;
+        transition: 0.5s;
+      }
+      nav > div > ul > li:hover a::after {
+        transform: translateX(-50%) scale(1);
+      }
+      nav > div ul:nth-child(3) li:nth-child(5):hover a::after {
+        transform: translateX(-50%) scale(0);
+      }
+      nav > div > ul .sub {
+        position: absolute;
+        left: -10px;
+        top: 58px;
+        width: 320px;
+        height: 168px;
+        padding: 24px;
+        background: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0;
+      }
+      nav > div > ul:first-child li:last-child:hover .sub {
+        opacity: 1;
+      }
+      nav > div > ul .sub li {
+        flex: 1 1 40%;
+      }
+      ul.visual {
+        display: flex;
+      }
+      ul.visual li {
+        flex: 1; /*부모의 값이 얼마든 3등분으로 똑같이 나눠가지겠다!*/
+      }
+      ul.visual li img {
+        width: 100%; /*이미지는 가로만 주면 세로는 자동으로 비율에 맞춰짐*/
+      }
+      .slide {
+        width: 1420px;
+        margin: 50px auto;
+        text-align: center;
+      }
+      .promotion {
+        width: 1420px;
+        margin: 0 auto;
+      }
+      .promotion > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .promotion > ul {
+        display: flex;
+        gap: 20px;
+      }
+      .promotion > ul li {
+        flex: 1;
+      }
+      .promotion > ul li img {
+        width: 100%;
+      }
+      .promotion > ul li a {
+        display: block;
+      }
+      .promotion > ul li a p:nth-child(2) {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .promotion > ul li:first-child p:nth-of-type(2) {
+        text-align: left;
+        font-size: 18px;
+        margin: 4px 0 10px;
+      }
+      .story > div {
+        width: 1420px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+      }
+      .story > ul {
+        width: 1420px;
+        display: flex;
+        margin: 0 auto;
+      }
+      .products div {
+        width: 1420px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        padding: 160px 0 0 0;
+      }
+      .products div h1 {
+        font-size: 24px;
+      }
+      .products ul {
+        width: 1420px;
+        display: flex;
+        margin: 0 auto;
+        gap: 20px;
+        padding: 50px;
+      }
+      .products ul li {
+        flex: 1;
+      }
+      .products ul li a img {
+        width: 223px;
+      }
+      .products ul li p {
+        padding: 30px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <!--메뉴생성 태그 -->
+      <div>
+        <ul class="left">
+          <li><a href="#">창업안내</a></li>
+          <li><a href="#">파바 매거진</a></li>
+          <li><a href="#">파바 스토리</a></li>
+          <li>
+            <a href="#">상품 안내</a>
+            <ul class="sub">
+              <li><a href="#">전체</a></li>
+              <li><a href="#">브레드</a></li>
+              <li><a href="#">케이크</a></li>
+              <li><a href="#">샌드위치/샐러드</a></li>
+              <li><a href="#">선물</a></li>
+              <li><a href="#">디저트/스낵</a></li>
+              <li><a href="#"> 커피/음료</a></li>
+              <li><a href="#">간편식</a></li>
+            </ul>
+          </li>
+        </ul>
+        <p>
+          <img
+            src="	https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/02/Paris_Baguette_logo_BG.gif"
+            alt="logo"
+          />
+        </p>
+        <ul class="right">
+          <li><a href="#">회사 소개</a></li>
+          <li><a href="#">매장 정보</a></li>
+          <li><a href="#">온라인 주문</a></li>
+          <li><a href="#">프로모션</a></li>
+          <li>
+            <a href="#"
+              ><span class="material-symbols-outlined"> search </span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <ul class="visual">
+      <li>
+        <a href="#"
+          ><img
+            src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/메인배너_1600_2000-3.jpg"
+            alt="01"
+        /></a>
+      </li>
+      <li>
+        <a href="#"
+          ><img
+            src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/더피메인배너_1600_2000_더피.jpg"
+            alt="01"
+        /></a>
+      </li>
+      <li>
+        <a href="#"
+          ><img
+            src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/메인배너_1600_2000_4.jpg"
+            alt="01"
+        /></a>
+      </li>
+    </ul>
+    <div class="slide">
+      <img
+        src="	https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/08/franchise_PC_1096x211.jpg"
+        alt=""
+      />
+    </div>
+    <div class="promotion">
+      <div>
+        <h1><a href="#">promotion</a></h1>
+        <p><a href="#">show more</a></p>
+      </div>
+      <ul>
+        <li>
+          <a href=""
+            ><!--예외적으로 display 블록주면 태그안에 블록요소 올 수 있음-->
+            <p>
+              <img
+                src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/0915_옥수수라떼말차라떼_썸네일_1000x1000-600x600.jpg"
+                alt=""
+              />
+            </p>
+            <p>
+              <span
+                ><strong
+                  >🍁가을에 퐁당 🌿제주말차라떼&<br />옥수수라떼🌽
+                  출시💙</strong
+                ></span
+              >
+              <span>READ MORE</span>
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href=""
+            ><!--예외적으로 display 블록주면 태그안에 블록요소 올 수 있음-->
+            <p>
+              <img
+                src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/250903_위시캣아이냥_피크닉매트_썸네일_1000x1000-2-600x600.jpg"
+                alt=""
+              />
+            </p>
+            <p>
+              <span>🍁가을에 퐁당 🌿제주말차라떼&옥수수라떼🌽 출시💙</span>
+              <span>READ MORE</span>
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href=""
+            ><!--예외적으로 display 블록주면 태그안에 블록요소 올 수 있음-->
+            <p>
+              <img
+                src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/케데헌_메인배너_1000_1000-600x600.jpg"
+                alt=""
+              />
+            </p>
+            <p>
+              <span>🍁가을에 퐁당 🌿제주말차라떼&옥수수라떼🌽 출시💙</span>
+              <span>READ MORE</span>
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href=""
+            ><!--예외적으로 display 블록주면 태그안에 블록요소 올 수 있음-->
+            <p>
+              <img
+                src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/핫샌드위치3종-썸넬-600x600.png"
+                alt=""
+              />
+            </p>
+            <p>
+              <span>🍁가을에 퐁당 🌿제주말차라떼&옥수수라떼🌽 출시💙</span>
+              <span>READ MORE</span>
+            </p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!--promotion 끝-->
+    <div class="products">
+      <div>
+        <h1><a href="#">PRODUCTS</a></h1>
+        <p><a href="#">SHOW MORE</a></p>
+      </div>
+      <ul>
+        <li>
+          <a href="#"
+            ><img
+              src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/소금버터소보루번-썸넬3-600x600.jpg"
+              alt="01"
+          /></a>
+          <p>골든 소보루 번</p>
+        </li>
+        <li>
+          <a href="#"
+            ><img
+              src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/행운의단팥빵-썸넬3-600x600.jpg"
+              alt="02"
+          /></a>
+          <p>행운의 단팥빵</p>
+        </li>
+        <li>
+          <a href="#"
+            ><img
+              src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/옥수수라떼-핫-썸넬-600x600.jpg"
+              alt="03"
+          /></a>
+          <p>옥수수 라떼</p>
+        </li>
+        <li>
+          <a href="#"
+            ><img
+              src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/곶감파운드_썸넬-600x600.png"
+              alt="04"
+          /></a>
+          <p>곶감 파운드</p>
+        </li>
+        <li>
+          <a href="#"
+            ><img
+              src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/치부시_더피_썸넬-600x600.png"
+              alt="05"
+          /></a>
+          <p>치즈가 부드러운시간</p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
