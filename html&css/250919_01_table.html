@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      table {
+        /* border: 1px solid; */
+        border-collapse: collapse;
+      }
+      table tr td {
+        border: 1px solid #ccc;
+        padding: 20px;
+      }
+      table tr td.tit {
+        background: #eee;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <!--표만들기-->
+      <tr>
+        <!--줄,행(row)-->
+
+        <td colspan="2" class="tit">셀1셀2</td>
+        <!--clospan 합치기-->
+        <!--열-->
+
+        <td>셀3</td>
+        <td>셀4</td>
+      </tr>
+      <tr>
+        <!--줄,행(row)-->
+
+        <td rowspan="2">셀1셀1</td>
+        <!--합치기-->
+        <!--열-->
+        <td>셀2</td>
+        <td>셀3</td>
+        <td>셀4</td>
+      </tr>
+      <tr>
+        <td>셀2</td>
+        <td>셀3</td>
+        <td>셀4</td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>카페베네</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      nav{
+        width: 1190px;
+        display: flex;
+        justify-content: space-between;
+        margin: 30px auto;
+      }
+      nav div.logo{ 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      nav ul.menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+      }
+    .right ul{
+       display: flex;
+    }
+    .right{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  
+    .right ul li a{
+      font-size: 12px;
+    }
+
+      nav .right p a{
+        border-radius: 20px;
+        background: #00A5B1;
+        text-align: center;
+        padding: 5px 40px;
+        color:#fff;
+        font-size: 14px;     
+      }
+      
+      div.banner p img{
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <p><a href="#"><img src="http://www.caffebene.co.kr/images/common/logo.png" alt="logo"></a></p>
+      </div>
+      <ul class="menu">
+        <li><a href="#">Caffebene</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Store</a></li>
+        <li><a href="#">Membership</a></li>
+        <li><a href="#">Global</a></li>
+        <li><a href="#">Contents</a></li>
+      </ul>
+      <div class="right">
+        <ul>
+          <li><a href="#">KRl</a></li>
+          <li><a href="#">EN</a></li>
+        </ul>
+        <p><a href="#">가맹문의</a></p>
+      </div>
+    </nav>
+    <div class="banner">
+      <p><img src="http://www.caffebene.co.kr/uploads/banner/20241128813084.jpg" alt="banner"></p>
+    </div>
+    </div>
+  </body>
+</html>
