@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :focus {
+        outline: none;
+      } /*처음 홈페이지 방문했을 때 검색창 등 깜빡깜빡하면서 움직이는데 바깥라인에 요소가 생기니? 그러면 없애줄게!*/
+    </style>
+  </head>
+  <body>
+    <button type="button">회원가입</button>
+    <form>
+      <fieldset>
+        <!--legend 속성은 border처럼 박스가 만들어진다-->
+        <legend>회원가입</legend>
+        <p>
+          아이디 :
+          <input
+            type="text"
+            maxlength="10"
+            minlength="5"
+            size="10"
+            placeholder="아이디입력"
+            onfocus="this.placeholder=''"
+            ;
+            autofocus
+          />
+          <!--autofocus는 처음 홈페이지 방문했을 때 검색창 등 깜빡깜빡하면서 움직임-->
+          <!-- this는 자바스크립트에 나오는 개념이며, 클릭하면 아이디입력 임시문구가 사라짐 -->
+        </p>
+        <p>비밀번호 : <input type="password" required /></p>
+        <p>검색 : <input type="search" /></p>
+        <p>이메일 : <input type="email" /></p>
+        <p>
+          전화번호 :
+          <input
+            type="emtel"
+            pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+            placeholder="000-0000-000"
+          />
+        </p>
+        <p>color : <input type="color" /></p>
+        <p>
+          number : <input type="number" value="1" step="5" max="20" min="1" />
+        </p>
+        <p>range : <input type="range" max="10" /></p>
+        <p>
+          <label for="men">남</label
+          ><!--input type의 id속성값을 label for에 같은 값을 줘야 남이라는 글자만 클릭해도 선택이 됨-->
+          <input type="radio" name="gender" id="men" value="남자" />
+          <!--radio는 name같아야 하나만 선택-->
+        </p>
+        <p><input type="radio" name="gender" id="women" value="여자" />여</p>
+        <p>
+          <label for="hobby">관심분야</label>
+          <input type="checkbox" name="design" id="hobby" />
+        </p>
+        <p><textarea name="txt" id="txt" cols="30" rows="10"></textarea></p>
+        <p>
+          <select name="city" id="city">
+            <option value="">선택</option>
+            <option value="서울">서울</option>
+            <option value="대전">대전</option>
+            <option value="부산">부산</option>
+          </select>
+        </p>
+        <p>년월일 : <input type="date" /></p>
+        <p>년월일 시간 : <input type="datetime-local" /></p>
+        <p>시간 : <input type="time" /></p>
+        <p>월 : <input type="month" /></p>
+        <p>주 : <input type="week" /></p>
+        <p><input type="submit" value="전송" /></p>
+        <p><input type="reset" /></p>
+        <p><input type="button" value="로그인" /></p>
+        <p><input type="image" src="./images/img_search.JPG" /></p>
+        <p><input type="file" multiple /></p>
+        <!--전송버튼-->
+      </fieldset>
+    </form>
+  </body>
+</html>

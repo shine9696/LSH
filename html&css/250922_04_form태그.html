@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form태그</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      input {
+        display: none;
+      }
+      p {
+        position: fixed;
+        left: 0;
+        top: 20px;
+        transition: 0.5s;
+        width: 960px;
+        border: 1px solid;
+      }
+      input:checked ~ p {
+        left: -100%;
+      } /*~ p는 형제라는뜻, 아래 형제만 적용
+      위 형제는 자바스크립트로만 됨, checked는 체크하면 요소가 나오는 태그*/
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" name="photo" id="photo" />
+    <label for="photo">이미지 보이기 / 숨기기</label>
+    <p><img src="./images/photo1.jpg" alt="" /></p>
+  </body>
+</html>
