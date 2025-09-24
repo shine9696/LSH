@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    
+    input{
+      display: none;
+    }
+    div.main{
+      display: flex;
+      margin: 50px auto;
+      justify-content: center;
+      color:#333
+    }
+     
+    div.main label:hover{
+      cursor: pointer;
+      font-weight: 600;
+    }
+    div.main label::after{
+      content: "|";
+      display: inline-block;
+      padding:0 20px
+      
+    }
+    div.main label:last-child::after{
+    content: "";}
+    
+    div.photo{
+      position: relative;
+      width: 1905px;
+      height: 480px;
+    }
+    div.photo p {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    div.photo p img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+    }
+    #menu1:checked ~ div.main label:first-child,
+    #menu2:checked ~ div.main label:nth-child(2),
+    #menu3:checked ~ div.main label:nth-child(3),
+    #menu4:checked ~ div.main label:nth-child(4),
+    #menu5:checked ~ div.main label:nth-child(5),
+    #menu6:checked ~ div.main label:nth-child(6){
+      text-decoration: underline;
+      text-decoration-color: aqua;
+      text-underline-offset: 10px;
+    }
+      #menu1:checked ~ div p:nth-child(1) img,
+      #menu2:checked ~ div p:nth-child(2) img,
+      #menu3:checked ~ div p:nth-child(3) img,
+      #menu4:checked ~ div p:nth-child(4) img,
+      #menu5:checked ~ div p:nth-child(5) img,
+      #menu6:checked ~ div p:nth-child(6) img {
+        opacity: 1;
+      }
+  </style>
+</head>
+<body>
+    <input type="radio" name="sub_menu" id="menu1" checked />
+    <input type="radio" name="sub_menu" id="menu2" />
+    <input type="radio" name="sub_menu" id="menu3" />
+    <input type="radio" name="sub_menu" id="menu4" />
+    <input type="radio" name="sub_menu" id="menu5" />
+    <input type="radio" name="sub_menu" id="menu6" />
+  </body>
+
+  <div class="main">
+    <label for="menu1">CEO 인사말</label>
+    <label for="menu2">연혁</label>
+    <label for="menu3">미션·비전</label>
+    <label for="menu4">CI</label>
+    <label for="menu5">계열사</label>
+    <label for="menu6">글로벌 사업장</label>
+  </div>
+
+  <div class="photo">
+    <p><img src="	https://tp-inc.com/images/sub/sub_visual01_1.jpg" alt="" /></p>
+    <p><img src="		https://tp-inc.com/images/sub/sub_visual02.jpg" alt="" /></p>
+    <p>
+      <img src="	https://tp-inc.com/images/sub/sub_visual_vision.jpg" alt="" />
+    </p>
+    <p><img src="	https://tp-inc.com/images/sub/sub_visual04_2.jpg" alt="" /></p>
+    <p>
+      <img src="https://tp-inc.com/images/sub/sub_visual_nadia.jpg" alt="" />
+    </p>
+    <p>
+      <img src="https://tp-inc.com/images/sub/sub_visual_global.jpg" alt="" />
+    </p>
+  </div>  
+</body>
+</html>

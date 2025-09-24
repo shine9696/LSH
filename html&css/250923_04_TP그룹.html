@@ -9,7 +9,9 @@
         margin: 0;
         padding: 0;
       }
-
+      input {
+        display: none;
+      }
       ul {
         list-style: none;
       }
@@ -22,15 +24,13 @@
         justify-content: center;
         color: #999999;
         font-size: 22px;
+        gap: 40px;
       }
 
       .main label::after {
-        display: inline-block;
+        position: absolute;
         content: "|";
-        padding: 20px;
-        color: #ddd;
-        left: 0;
-        height: 3px;
+        padding: 0 20px;
       }
       .main label:nth-child(6)::after {
         content: "";

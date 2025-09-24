@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <audio controls muted>
+      <!--muted:음소거-->
+      <source src="./video/Kalimba.mp3" type="audio/mp3" />
+      <!--실행이 안되면 2번째꺼나옴-->
+      <source src="./video/Kalimba.ogg" type="audio/ogg" />
+    </audio>
+    <video controls autoplay muted loop>
+      <!-- 자동재생 음소거/ loop는 반복자동재생-->
+      <source src="./video/Wildlife.mp4" type="video/mp4" />
+      <source src="./video/Wildlife.webm" type="video/webm" />
+    </video>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/zN8K_uE1LYg?autoplay=1&mute=1&loop=1&playlist=zN8K_uE1LYg"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </body>
+</html>
