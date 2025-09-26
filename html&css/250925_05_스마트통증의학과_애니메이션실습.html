@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스마트통증의학과_애니메이션실습</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .quickwrap {
+        position: relative;
+        width: 113px;
+        height: 113px;
+        background: rgba(35, 35, 35, 0.8);
+        border-radius: 50%;
+      }
+      .quickBtn img {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+      }
+      .quicktxt img {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        animation-name: move;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      @keyframes move {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="quickwrap">
+      <p class="quickBtn">
+        <img
+          src="http://www.smart-pain.com/new/images/main/quick_icon.png"
+          alt="tel"
+        />
+      </p>
+      <p class="quicktxt">
+        <img
+          src="http://www.smart-pain.com/new/images/main/quick_txt.png"
+          alt="txt"
+        />
+      </p>
+    </div>
+  </body>
+</html>

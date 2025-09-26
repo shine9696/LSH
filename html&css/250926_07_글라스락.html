@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글라스락</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-image: url(https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/innovation/bg_inno1.jpg);
+        height: 100vh;
+      }
+
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .wrap {
+        width: 1720px;
+        height: 100vh;
+        margin: 0 100px;
+        position: relative;
+      }
+      .wrap nav {
+        width: 1720px;
+        display: flex;
+        justify-content: space-between;
+        margin: 50px auto;
+      }
+      .wrap .menu {
+        color: #fff;
+        display: flex;
+      }
+      .wrap nav .logo img {
+        filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(143deg)
+          brightness(107%) contrast(100%);
+        width: 150px;
+      }
+      .wrap nav .mall {
+        width: 150px;
+      }
+      .wrap nav .mall p {
+        display: inline-block;
+        border: 1.5px solid;
+        border-radius: 50px;
+        padding: 0 12px;
+      }
+      .wrap nav .mall p img {
+        filter: invert();
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+      }
+      .wrap nav .menu .mall p span {
+        line-height: 20px;
+        color: #fff;
+        margin-left: 5px;
+      }
+      .wrap nav .lang {
+        text-decoration: underline;
+        text-underline-offset: 10px;
+        font-size: 14px;
+      }
+      .wrap .txt {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 90px;
+      }
+      .wrap .full {
+        display: block;
+        width: 35px;
+        height: 5px;
+        background: #333;
+        margin: 6px 0;
+        transition: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <nav>
+        <div class="logo">
+          <p>
+            <a href="#">
+              <img
+                src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/common/logo.svg"
+                alt="logo"
+            /></a>
+          </p>
+        </div>
+        <div class="menu">
+          <div class="mall">
+            <p>
+              <a href="#"
+                ><img
+                  src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/common/ico_topmall_cart_bk.svg"
+                  alt="mall"
+                /><span>글라스락몰</span></a
+              >
+            </p>
+          </div>
+          <div class="lang">
+            <span>한국어</span>
+          </div>
+          <div class="full">
+            <label for="menu">
+              <span class="bar1"></span>
+              <span class="bar2"></span>
+              <span class="bar3"></span>
+            </label>
+          </div>
+        </div>
+      </nav>
+      <div class="txt">
+        <p>INNOVATION</p>
+      </div>
+    </div>
+  </body>
+</html>
