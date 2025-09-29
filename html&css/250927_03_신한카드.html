@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>신한카드</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .main {
+        width: 1200px;
+        margin: 50px auto;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      .main .list {
+        width: 280px;
+        height: 357px;
+        box-sizing: border-box;
+        border: 1px solid #e5e5e5;
+        border-radius: 24px;
+        padding: 32px;
+      }
+      .main .list:hover {
+        border: 1px solid blue;
+        cursor: pointer;
+        transform: translateY(-30px);
+        transition: 0.5s;
+        background-color: #f7f8fc;
+      }
+      .main .list li {
+        padding: 10px;
+      }
+
+      .main .list li span:first-child {
+        font-size: 20px;
+      }
+      .main .list li span:last-child {
+        font-size: 24px;
+      }
+      .main .list li:last-child {
+        border-radius: 99px;
+        border: 1px solid #fff;
+        background-color: #f1f4fb;
+      }
+      .main .list li:last-child:hover {
+        background-color: #fff;
+      }
+      ul li p {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+      }
+      .main .list li:last-child {
+        font-size: 18px;
+      }
+      .main .list:first-child li:nth-child(2) p {
+        background-image: url(./images/data.png);
+      }
+      .main .list:first-child .list:nth-child(2):hover p {
+        background-image: url(./images/icon_main_data_play-DqZ64cB9.png);
+        background-size: 10920px 120px;
+        animation: adplay 3s steps(91) infinite;
+      }
+      @keyframes adplay {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: -10920px 0;
+        }
+      }
+      ul li:nth-child(2) p {
+        background-image: url(./images/icon_main_ad.png);
+      }
+      ul li:nth-child(2):hover p {
+        background-image: url(./images/icon_main_ad_play.png);
+        background-size: 10920px 120px;
+        animation: adplay 3s steps(91) infinite;
+      }
+      @keyframes adplay {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: -10920px 0;
+        }
+      }
+
+      .main .list:nth-child(3) li:nth-child(2) p {
+        background-image: url(./images/two.png);
+      }
+      .main .list:nth-child(3) li:nth-child(2):hover p {
+        background-image: url(./images/two_play.png);
+        background-size: 11040px 120px;
+        animation: two 3s steps(92) infinite;
+      }
+
+      @keyframes two {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: -11040px 0;
+        }
+      }
+      .main .list:last-child .list:nth-child(2) p {
+        background-image: url(./images/icon_main_api-CjE8IDAu.png);
+      }
+      .main .list:last-child .list:nth-child(2):hover p {
+        background-image: url(./images/icon_main_api_play-CKY5tjWz.png);
+        background-size: 10920px 120px;
+        animation: adplay 3s steps(91) infinite;
+      }
+      @keyframes adplay {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: -10920px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <ul class="list">
+        <li>
+          <span>다양한 ></span><br />
+
+          <span><strong>Data서비스</strong></span>
+        </li>
+        <li><p></p></li>
+        <li>Data One-Stop Service</li>
+      </ul>
+      <ul class="list">
+        <li>
+          혁신적인<br />
+          솔루션서비스
+        </li>
+        <li><p></p></li>
+        <li>상권분석, 시장 모니터링</li>
+      </ul>
+      <ul class="list">
+        <li>
+          스마트한<br />
+          광고서비스
+        </li>
+        <li><p></p></li>
+        <li>최적의 고객 타켓팅</li>
+      </ul>
+      <ul class="list">
+        <li>
+          탁월한<br />
+          API서비스
+        </li>
+        <li><p></p></li>
+        <li>Data 실시간 활용</li>
+      </ul>
+    </div>
+  </body>
+</html>
