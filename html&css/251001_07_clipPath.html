@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p img {
+        /* clip-path: circle(50%); */
+      }
+      div {
+        position: relative;
+        width: 500px;
+        height: 300px;
+        overflow: hidden;
+      }
+      div p {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+      div p > img {
+        clip-path: inset(0);
+        transition: 0.5s;
+      }
+      div > img {
+        filter: blur(20px);
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      div p > img:hover {
+        clip-path: inset(20px round 250px 250px 0 0);
+        /*20px은 상하좌우 간격 띄우는것.*/
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="./images/photo1.jpg" alt="" />
+      <p><img src="./images/photo1.jpg" alt="" /></p>
+    </div>
+  </body>
+</html>
