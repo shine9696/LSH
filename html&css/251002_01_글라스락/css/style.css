@@ -1,0 +1,281 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff")
+    format("woff");
+  font-weight: 100;
+  font-display: swap;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+input {
+  display: none;
+}
+#fullmenu {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  width: 500px;
+  height: 100%;
+  background: #fff;
+  transition: 0.5s;
+  z-index: 1;
+}
+#fullmenu ul {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+#fullmenu ul li {
+  margin: 25px 0;
+}
+#fullmenu ul li a {
+  font-size: 27px;
+}
+section {
+  height: 100vh;
+}
+section.visual {
+  position: relative;
+  background-image: url(https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/innovation/bg_inno1.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section.visual nav {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  max-width: 1720px;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  z-index: 1; /*x자 보이게 하려고 부모에 적용*/
+}
+section.visual nav .logo {
+  width: 150px;
+}
+section.visual nav .logo img {
+  width: 100%;
+  filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(143deg)
+    brightness(107%) contrast(100%);
+}
+section.visual nav .right {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+section.visual nav .right .mall {
+  height: 28px;
+  line-height: 28px;
+  padding: 0 20px;
+  border: 1px solid #fff;
+  border-radius: 30px;
+}
+section.visual nav .right .mall a {
+  color: #fff;
+}
+section.visual nav .right .mall img {
+  width: 20px;
+  height: 20px;
+  filter: invert();
+  vertical-align: middle;
+}
+section.visual nav .right .lang a {
+  display: block;
+  /* text-decoration: underline;
+  text-decoration-color: #fff;
+  text-underline-offset: 10px; */
+  border-bottom: 1px solid #fff;
+  padding: 10px;
+  color: #fff; /*가상선택자로 밑줄을 주면 3개의 아래위치가 맞음*/
+}
+section.visual nav .right .hambuger {
+  position: relative;
+}
+section.visual nav .right .hambuger label {
+  cursor: pointer;
+}
+section.visual nav .right .hambuger label span {
+  display: block;
+  width: 35px;
+  height: 2px;
+  background: #fff;
+  margin: 9px 0;
+  transition: 0.5s;
+}
+section.visual h1 {
+  font-size: 90px;
+  color: #fff;
+}
+#menu:checked ~ section.visual nav .right .hambuger label span.bar1 {
+  transform: translate(0, 11px) rotate(45deg);
+  background: #000;
+}
+#menu:checked ~ section.visual nav .right .hambuger label span.bar2 {
+  opacity: 0;
+}
+#menu:checked ~ section.visual nav .right .hambuger label span.bar3 {
+  transform: translate(0, -11px) rotate(-45deg);
+  background: #000;
+}
+#menu:checked ~ #fullmenu {
+  right: 0;
+}
+#menu:checked ~ section.visual::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(100% - 500px);
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 2;
+}
+#mall_btn {
+  position: fixed;
+  right: 100px;
+  bottom: 50px;
+  cursor: pointer;
+}
+#mall_btn ul {
+  border-radius: 40px 40px;
+  background: #173d81;
+  height: 85px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+#mall_btn ul li {
+  width: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  color: #fff;
+  padding-top: 25px;
+}
+#mall_btn ul li img {
+  width: 32px;
+  height: 32px;
+}
+#mall_btn ul li:nth-child(3) img,
+#mall_btn ul li:nth-child(4) img {
+  filter: invert();
+}
+#mall_btn:hover ul {
+  height: 240px;
+}
+#mall_btn:hover ul li:first-child {
+  display: none;
+}
+.con1 {
+  width: 100%;
+  height: 919px;
+  margin: 100px auto;
+}
+.con1 .imgbox {
+  display: flex;
+  justify-content: center;
+}
+.con1 .imgbox p img {
+  width: 1280px;
+  height: 470px;
+}
+.con1 .txt {
+  text-align: center;
+  margin-top: 60px;
+}
+.con1 .txt h1 span {
+  font-size: 45px;
+  font-family: "Pretendard";
+  font-weight: 300;
+}
+.con1 .txt span {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 27px;
+  font-family: "Pretendard";
+}
+footer {
+  width: 1720px;
+  height: 100%;
+  padding: 50px 0;
+  margin: 0 100px;
+}
+footer div.foot1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+footer .logo img {
+  width: 150px;
+}
+address p {
+  font-size: 16.2px;
+  font-style: normal;
+  font-family: "Pretendard";
+  line-height: 1.5;
+}
+address p span {
+  font-weight: bold;
+}
+.icon ul li:first-child {
+  background-image: url(https://www.glasslock.co.kr/pages/layout/_glasslock/images/common/youtube_icon2.png);
+  width: 25px;
+  height: 25px;
+  background-size: cover;
+}
+.icon ul li:nth-child(2) {
+  background-image: url(https://www.glasslock.co.kr/pages/layout/_glasslock/images/common/ico_insta.svg);
+  width: 25px;
+  height: 25px;
+  background-size: cover;
+}
+.icon ul li:nth-child(3) {
+  background-image: url(https://www.glasslock.co.kr/pages/layout/_glasslock/images/common/ico_blog.svg);
+  width: 25px;
+  height: 25px;
+  background-size: cover;
+}
+.icon ul li:nth-child(4) {
+  background-image: url(https://www.glasslock.co.kr/pages/layout/_glasslock/images/common/ico_smartstore.svg);
+  width: 25px;
+  height: 25px;
+  background-size: cover;
+}
+
+footer .icon ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+footer .icon ul li:last-child {
+  border: 1px solid;
+  padding: 5px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Pretendard";
+}
+
+footer .foot {
+  font-size: 12.6px;
+  margin-top: 10px;
+}
