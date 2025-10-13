@@ -3,68 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>연습</title>
+    <title>grid 웹디자인기능사 예제A-3</title>
     <style>
       * {
         margin: 0;
         padding: 0;
       }
-      ul {
-        list-style: none;
-      }
-      a {
-        color: #ccc;
-        text-decoration: none;
-      }
-      .wrap {
-        width: 1200px;
+      .grid-container {
         display: grid;
+        width: 1200px;
         margin: 0 auto;
-        grid-template-columns: 200px 200px 400px 400px;
+        grid-template-columns: 200px 200px 400px 200px 200px;
+        grid-template-areas: "hlogo menu menu menu menu" "slide  slide  slide  slide  slide" "c1 c1 c3 c4 c4" "flogo fmenu fmenu fmenu fmenu" "flogo copyright copyright copyright copyright";
         grid-template-rows: 100px 300px 200px 50px 50px;
-        grid-template-areas: "tlogo menu menu menu" "slide slide slide slide" "c1 c1 c3 c4" "flogo fmenu fmenu fmenu" "flogo copyright copyright copyright";
       }
-      .wrap .tlogo {
-        grid-area: tlogo;
+
+      .grid-container .hlogo {
+        grid-area: hlogo;
         background: #aaa;
       }
-      .wrap .menu {
+      .grid-container .menu {
         grid-area: menu;
         background: #bbb;
       }
-      .wrap .slide {
+      .grid-container .slide {
         grid-area: slide;
         background: #ccc;
       }
-      .wrap .c1 {
+      .grid-container .c1 {
         grid-area: c1;
         background: #ddd;
       }
-      .wrap .c3 {
+      .grid-container .c3 {
         grid-area: c3;
         background: #eee;
       }
-      .wrap .c4 {
+      .grid-container .c4 {
         grid-area: c4;
         background: #aaa;
       }
-      .wrap .flogo {
+      .grid-container .flogo {
         grid-area: flogo;
         background: #bbb;
       }
-      .wrap .fmenu {
+      .grid-container .fmenu {
         grid-area: fmenu;
         background: #ccc;
       }
-      .wrap .copyright {
+      .grid-container .copyright {
         grid-area: copyright;
         background: #ddd;
       }
     </style>
   </head>
   <body>
-    <div class="wrap">
-      <div class="tlogo"></div>
+    <div class="grid-container">
+      <div class="hlogo"></div>
       <div class="menu"></div>
       <div class="slide"></div>
       <div class="c1"></div>
