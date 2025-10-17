@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한화그룹</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+      ul.con {
+        display: grid;
+        max-width: 1760px;
+        width: 90%;
+        margin: 50px auto;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5vw;
+      }
+
+      ul.con li {
+        text-align: center;
+        border: 1px solid #fff;
+        border-radius: 20px;
+        padding: 2em 1.25em;
+        box-sizing: content-box;
+        background: #efe8e4;
+      }
+
+      ul.con li h1 {
+        padding: 30px;
+      }
+      ul.con li p {
+        padding: 20px;
+      }
+      ul.con li .txt p img {
+      }
+      ul.con li p.box {
+        border-top: 1px solid #cccccc;
+      }
+      @media screen and (max-width: 750px) {
+        ul.con {
+          grid-template-columns: 1fr;
+          grid-auto-rows: repeat(3, 1fr);
+        }
+        ul.con li {
+          grid-column: 1 / span 3;
+          padding: 18px 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="con">
+      <li>
+        <div class="txt">
+          <p>
+            <img
+              src="https://www.hanwha.com/assets/img/main/sustainable-and-inclusive-growth.svg"
+              alt=""
+            />
+          </p>
+          <h1>
+            Sustainable and<br />
+            Inclusive Growth
+          </h1>
+          <p class="box">
+            We strive for social, economic, and<br />
+            environmental prosperity for all
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="txt">
+          <p>
+            <img
+              src="https://www.hanwha.com/assets/img/main/technology-and-solution-driven-innovation.svg"
+              alt=""
+            />
+          </p>
+          <h1>
+            Sustainable and<br />
+            Inclusive Growth
+          </h1>
+
+          <p class="box">
+            We strive for social, economic, and<br />
+            environmental prosperity for all
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="txt">
+          <p>
+            <img
+              src="https://www.hanwha.com/assets/img/main/hanwha-enhances-lives.svg"
+              alt=""
+            />
+          </p>
+          <h1>
+            Sustainable and<br />
+            Inclusive Growth
+          </h1>
+
+          <p class="box">
+            We strive for social, economic, and<br />
+            environmental prosperity for all
+          </p>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>
