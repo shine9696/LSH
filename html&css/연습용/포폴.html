@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .slate {
+        position: relative;
+        width: 400px; /* 이미지 크기에 맞게 조절 */
+      }
+
+      .slate img {
+        width: 100%;
+        display: block;
+      }
+
+      .slate .top {
+        position: absolute;
+        top: -100px;
+        left: 0;
+        transform-origin: left top; /* 회전 중심 */
+        transition: transform 0.3s ease;
+      }
+
+      /* 클릭 시 슬레이트 닫히는 효과 */
+      .slate:hover .top {
+        transform: rotate(-25deg);
+      }
+      @keyframes clap {
+        0% {
+          transform: rotate(0deg);
+        }
+        30% {
+          transform: rotate(-25deg);
+        }
+        60% {
+          transform: rotate(5deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+
+      .slate .top {
+        animation: clap 1s ease-in-out infinite;
+        transform-origin: left top;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slate">
+      <img src="../images/body수정.psd" class="body" alt="슬레이트 본체" />
+      <img src="../images/top수정.psd" class="top" alt="슬레이트 윗부분" />
+    </div>
+  </body>
+</html>

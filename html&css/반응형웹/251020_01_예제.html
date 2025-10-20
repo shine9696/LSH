@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>예제</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #ccc;
+      }
+      ul.con {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1080px;
+        width: 90%;
+        margin: 0 auto;
+        gap: 15px;
+      }
+      .con li {
+        flex: 1 0 20%;
+      }
+      .con li p img {
+        width: 100%;
+        object-fit: cover;
+        filter: grayscale();
+      }
+      .con li p:hover img {
+        filter: grayscale(0);
+      }
+      @media screen and (max-width: 960px) {
+        .con li {
+          flex: 1 0 40%;
+        }
+      }
+      @media screen and (max-width: 760px) {
+        .con li {
+          flex: 1 0 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="con">
+      <li>
+        <p>
+          <img src="../images 예제/p_images/sub_gallery_01.jpg" alt="" />
+        </p>
+      </li>
+      <li>
+        <p>
+          <img src="../images 예제/p_images/sub_gallery_02.jpg" alt="" />
+        </p>
+      </li>
+      <li>
+        <p>
+          <img src="../images 예제/p_images/sub_gallery_03.jpg" alt="" />
+        </p>
+      </li>
+      <li>
+        <p>
+          <img src="../images 예제/p_images/sub_gallery_04.jpg" alt="" />
+        </p>
+      </li>
+      <li>
+        <p>
+          <img src="../images 예제/p_images/sub_gallery_05.jpg" alt="" />
+        </p>
+      </li>
+      <li>
+        <p>
+          <img src="../images 예제/p_images/sub_gallery_06.jpg" alt="" />
+        </p>
+      </li>
+      <li>
+        <p>
+          <img src="../images 예제/p_images/sub_gallery_07.jpg" alt="" />
+        </p>
+      </li>
+      <li>
+        <p>
+          <img src="../images 예제/p_images/sub_gallery_08.jpg" alt="" />
+        </p>
+      </li>
+      <li>
+        <p>
+          <img src="../images 예제/p_images/sub_gallery_09.jpg" alt="" />
+        </p>
+      </li>
+      <li>
+        <p>
+          <img src="../images 예제/p_images/sub_gallery_10.jpg" alt="" />
+        </p>
+      </li>
+      <li>
+        <p>
+          <img src="../images 예제/p_images/sub_gallery_11.jpg" alt="" />
+        </p>
+      </li>
+      <li>
+        <p>
+          <img src="../images 예제/p_images/sub_gallery_12.jpg" alt="" />
+        </p>
+      </li>
+    </ul>
+  </body>
+</html>
