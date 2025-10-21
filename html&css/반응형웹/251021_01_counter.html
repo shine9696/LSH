@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        counter-increment: number;
+      }
+      p::before {
+        content: counter(number);
+      }
+      /*counter-increment는 숫자 1씩 증가 표현, 가상선택자 counter(number)는 숫자 1씩 증가 화면 표시~*/
+    </style>
+  </head>
+  <body>
+    <p><a href="#">하나</a></p>
+    <p><a href="#">하나</a></p>
+    <p><a href="#">하나</a></p>
+    <p><a href="#">하나</a></p>
+    <p><a href="#">하나</a></p>
+  </body>
+</html>
