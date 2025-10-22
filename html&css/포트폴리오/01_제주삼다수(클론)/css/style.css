@@ -3,6 +3,9 @@
   margin: 0;
   padding: 0;
 }
+html {
+  font-size: 62.5%;
+}
 ul {
   list-style: none;
 }
@@ -12,10 +15,21 @@ a {
 }
 .wrap {
   width: 100%;
-  height: 100vh;
-  max-width: 1920px;
-  display: flex;
+  max-width: 1905px;
   margin: 0 auto;
 }
 .wrap .top {
+  width: 100%;
+  height: 100vh;
+  background: url(../images/삼다수_bg_W.png);
+}
+.wrap .top header {
+  width: 100%;
+  height: 90px;
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+.wrap .top header .logo img {
+  width: 21.3rem;
 }

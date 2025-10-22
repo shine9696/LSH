@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GS파워_고객마당</title>
+    <style>
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff")
+          format("woff");
+        font-weight: 100;
+        font-display: swap;
+      }
+      html {
+        font-size: 62.5%;
+        font-family: "Pretendard";
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      .wrap {
+        width: 100%;
+        max-width: 1910px;
+        margin: 0 auto;
+      }
+      .wrap > p {
+        width: 100%;
+        text-align: center;
+        padding: 100px 0;
+        font-size: 3.8rem;
+        font-weight: 700;
+      }
+      .wrap ul.customer {
+        width: 152rem;
+        height: 48.4rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 auto;
+        gap: 40px;
+      }
+      .wrap ul.customer li {
+        border: 1px solid #ccc;
+        border-radius: 20px;
+      }
+      .wrap ul.customer li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+      .wrap ul.customer li div.txt {
+        height: 22rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 48px;
+        box-sizing: border-box;
+      }
+      .wrap ul.customer li a p {
+        position: absolute;
+        right: 48px;
+        top: 40%;
+      }
+
+      .wrap ul.customer li h3 {
+        font-size: 2.4rem;
+      }
+      .wrap ul.customer li .txt .arrow {
+        padding-left: 30px;
+      }
+      .wrap ul.customer li .txt h5 {
+        font-size: 1.4rem;
+        color: #999999;
+        font-weight: 300;
+      }
+      @media screen and (max-width: 1590px) {
+        .wrap {
+          width: 95%;
+        }
+        .wrap ul.customer {
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 1440px) {
+        .wrap ul.customer {
+          gap: 30px;
+        }
+      }
+      @media screen and (max-width: 1020px) {
+        .wrap ul.customer {
+          gap: 20px;
+        }
+        .wrap ul.customer li h3 {
+          font-size: 2rem;
+        }
+        .wrap ul.customer li .txt h5 {
+          font-size: 1.3rem;
+        }
+        .wrap ul.customer li div.txt {
+          padding: 20px;
+        }
+        .wrap ul.customer li a p {
+          right: 20px;
+          top: 50%;
+        }
+      }
+      @media screen and (max-width: 760px) {
+        .wrap ul.customer {
+          grid-template-columns: 1fr;
+          height: 12rem;
+          grid-auto-rows: 12rem;
+        }
+        .wrap ul.customer li div.txt {
+          padding: 15px;
+          height: 12rem;
+        }
+        .wrap ul.customer li a p {
+          top: 20%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <p>고객마당</p>
+      <ul class="customer">
+        <li>
+          <a href="#">
+            <div class="txt">
+              <h3>열요금정보</h3>
+              <h5>VIEW MORE<span class="arrow"> →</span></h5>
+            </div>
+            <p>
+              <img
+                src="https://www.gspower.co.kr/pub/images/icon_customer_yard01.svg"
+                alt=""
+              />
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="txt">
+              <h3>설비정보</h3>
+              <h5>VIEW MORE<span class="arrow"> →</span></h5>
+            </div>
+            <p>
+              <img
+                src="https://www.gspower.co.kr/pub/images/icon_customer_yard02.svg"
+                alt=""
+              />
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="txt">
+              <h3>교육정보</h3>
+              <h5>VIEW MORE<span class="arrow"> →</span></h5>
+            </div>
+            <p>
+              <img
+                src="https://www.gspower.co.kr/pub/images/icon_customer_yard03.svg"
+                alt=""
+              />
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="txt">
+              <h3>세대정보</h3>
+              <h5>VIEW MORE<span class="arrow"> →</span></h5>
+            </div>
+            <p>
+              <img
+                src="https://www.gspower.co.kr/pub/images/icon_customer_yard04.svg"
+                alt=""
+              />
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="txt">
+              <h3>자료실</h3>
+              <h5>VIEW MORE<span class="arrow"> →</span></h5>
+            </div>
+            <p>
+              <img
+                src="https://www.gspower.co.kr/pub/images/icon_customer_yard05.svg"
+                alt=""
+              />
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="txt">
+              <h3>공지사항</h3>
+              <h5>VIEW MORE<span class="arrow"> →</span></h5>
+            </div>
+            <p>
+              <img
+                src="https://www.gspower.co.kr/pub/images/icon_customer_yard06.svg"
+                alt=""
+              />
+            </p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
