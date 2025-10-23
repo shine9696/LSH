@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      span {
+        display: none;
+      }
+    </style>
+    <script>
+      //document.getElementById("demo").innerHTML;
+    </script>
+  </head>
+  <body>
+    <p id="demo">자바스크립트<span>시작</span></p>
+    <!--자바스크립트는 돔부분(위컨텐츠)을 받아들이고 아래부분을 받아들여서 body안에 넣는다-->
+    <script>
+      console.log(document.getElementById("demo").innerHTML);
+      console.log(document.getElementById("demo").innerText);
+      console.log(document.getElementById("demo").textContent);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .list {
+        background-color: blue !important;
+      }
+    </style>
+    <script>
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "Paragraph changed.";
+      } /*함수는 먼저 선언을 해도 파싱(적용)x */
+    </script>
+  </head>
+  <body>
+    <h2>Demo JavaScript in Head</h2>
+    <p id="demo">A Paragraph</p>
+    <ul>
+      <li class="list">1</li>
+      <!-- <li class="list">2</li>
+      <li class="list">3</li>
+      <li class="list">4</li> -->
+    </ul>
+    <!-- //<button type="button" onclick="myFunction()">Try it</button> -->
+    <button type="button" id="btn">Try it</button>
+    <script>
+      document.getElementById("btn").onclick = function () {
+        myFunction();
+      };
+      document.getElementsByClassName("list")[0].style.fontSize = "50px";
+      //[0]는 인덱스번호임 즉, hmtl에서 nth-child사용한것처럼 해당되는 번호 써야함!
+      document.getElementsByTagName("ul")[0].style.border = "1px solid";
+    </script>
+  </body>
+</html>
