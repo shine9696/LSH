@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        color: #ccc;
+        text-decoration: none;
+      }
+      .wrap {
+        width: 1905px;
+        height: 450px;
+        margin: 0 auto;
+        background-size: cover;
+      }
+      .wrap ul.item {
+        width: 1400px;
+        height: 180px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 100px;
+        gap: 50px;
+      }
+      .wrap ul.item li {
+        border-radius: 50%;
+        border: 10px solid red;
+        box-sizing: border-box;
+        background: #fff no-repeat center 0 / auto 112px;
+      }
+      .wrap ul.item li .con {
+        text-align: center;
+        width: 180px;
+        height: 180px;
+      }
+      .bg {
+      }
+      .bg1 {
+        background-image: url(https://www.shinsegaefood.com/images/business/business_bg_food.jpg);
+      }
+      .bg2 {
+        background-image: url(https://www.shinsegaefood.com/images/business/business_bg_bakery.jpg);
+      }
+      .bg3 {
+        background-image: url(https://www.shinsegaefood.com/images/business/business_bg_franchise.jpg);
+      }
+      .bg4 {
+        background-image: url(https://www.shinsegaefood.com/images/business/business_bg_premiumService.jpg);
+      }
+      .bg5 {
+        background-image: url(https://www.shinsegaefood.com/images/business/business_bg_foodService.jpg);
+      }
+      .bg6 {
+        background-image: url(https://www.shinsegaefood.com/images/business/business_bg_subsidiary.jpg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <ul class="item">
+        <li>
+          <div class="con">
+            <p>
+              <img
+                src="https://www.shinsegaefood.com/images/business/bg_business_tab01_on.png"
+                alt=""
+              />
+            </p>
+            <h3>식품제조/<br />유통</h3>
+          </div>
+        </li>
+        <li>
+          <div class="con">
+            <p>
+              <img
+                src="https://www.shinsegaefood.com/images/business/bg_business_tab02_on.png"
+                alt=""
+              />
+            </p>
+            <h3>베이커리</h3>
+          </div>
+        </li>
+        <li>
+          <div class="con">
+            <p>
+              <img
+                src="https://www.shinsegaefood.com/images/business/bg_business_tab03_on.png"
+                alt=""
+              />
+            </p>
+            <h3>프랜차이즈</h3>
+          </div>
+        </li>
+        <li>
+          <div class="con">
+            <p>
+              <img
+                src="https://www.shinsegaefood.com/images/business/bg_business_tab04_on.png"
+                alt=""
+              />
+            </p>
+            <h3>프리미엄<br />다이닝</h3>
+          </div>
+        </li>
+        <li>
+          <div class="con">
+            <p>
+              <img
+                src="https://www.shinsegaefood.com/images/business/bg_business_tab05_on.png"
+                alt=""
+              />
+            </p>
+            <h3>푸드서비스</h3>
+          </div>
+        </li>
+        <li>
+          <div class="con">
+            <p>
+              <img
+                src="https://www.shinsegaefood.com/images/business/bg_business_tab06_on.png"
+                alt=""
+              />
+            </p>
+            <h3>자회사</h3>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script>
+      document.querySelectorAll(".wrap").forEach(function (v, k, ar) {
+        v.classList.add("bg1");
+        v.onclick = function () {
+          ar.forEach(function (v) {
+            v.classList.remove("bg1", "bg2", "bg3", "bg4", "bg5", "bg6");
+            document.querySelector("div").classList.add("bg" + (k + 1));
+          });
+        };
+      });
+    </script>
+  </body>
+</html>
