@@ -189,10 +189,7 @@ a {
 .wrap .section04 {
   width: 100%;
   height: 100vh;
-<<<<<<< HEAD
-  background-image: url(../images/삼다수_bg4.jpg);
-=======
->>>>>>> ddf421ea65321d67ae77098cc9164d1bbf31a954
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
