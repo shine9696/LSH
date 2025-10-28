@@ -126,6 +126,9 @@ a {
   position: relative;
   z-index: 2;
 }
+.wrap p.txtimg img {
+  width: 100%;
+}
 .wrap .water {
   position: fixed;
   left: 50%;
@@ -135,6 +138,8 @@ a {
 }
 .wrap .water img {
   width: 232px;
+
+  height: auto;
 }
 .wrap .section02 .txt h3 {
   font-family: "DM Sans";
@@ -176,6 +181,7 @@ a {
   font-size: 1.7rem;
   line-height: 40px;
   text-align: center -120px;
+  display: block;
 }
 .wrap .section03 .more:hover a {
   text-decoration: underline;
@@ -184,10 +190,12 @@ a {
 .wrap .section04 {
   width: 100%;
   height: 100vh;
-  background-size: 100%;
+  background-image: url(../images/삼다수_bg4.jpg);
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  overflow: hidden;
 }
 
 .wrap .section04 .txt h1,
@@ -214,10 +222,13 @@ a {
 }
 .wrap .bottxt {
   position: absolute;
+  width: 45rem;
   bottom: 90px;
   left: 180px;
+  line-height: 1.6;
   color: #fff;
   animation: move 1.5s;
+  word-break: keep-all;
 }
 @keyframes move {
   0% {
@@ -300,10 +311,10 @@ a {
   text-align: center;
 }
 .wrap footer .footlogo p img {
-  width: 213px;
+  width: 232px;
 }
-.wrap footer .util .wrap section:nth-of-type(1) {
-  background-image: url(../images/삼다수_bg_w.png);
+.wrap section:nth-of-type(1) {
+  background-image: url(../images/삼다수_bg_W.png);
 }
 .wrap section:nth-of-type(2) {
   background-image: url(../images/삼다수_bg_B.png);
@@ -311,6 +322,8 @@ a {
 .wrap section:nth-of-type(3) {
   background-image: url(../images/삼다수_bg_G.png);
 }
-.wrap section:nth-of-type(4) {
-  background-image: url(../images/삼다수_bg4.jpg);
+@media screen and (max-width: 1580px) {
+  .wrap .top header .menu {
+    gap: 10rem;
+  }
 }
