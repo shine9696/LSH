@@ -94,8 +94,9 @@ a {
 }
 .wrap section .txt {
   text-align: center;
-  top: -110px;
+  top: -105px;
   position: relative;
+  margin: 0 auto;
   animation: ani 1.5s;
 }
 @keyframes ani {
@@ -126,6 +127,7 @@ a {
   position: relative;
   z-index: 2;
 }
+
 .wrap p.txtimg img {
   width: 100%;
 }
@@ -138,21 +140,9 @@ a {
 }
 .wrap .water img {
   width: 232px;
-  height: auto;
+  height: 100%;
 }
-.wrap .section02 .txt h3 {
-  font-family: "DM Sans";
-  font-size: 3rem;
-  font-weight: 1000;
-  letter-spacing: 2px;
-  color: #fff;
-}
-.wrap .section02 .txt p span {
-  font-size: 1.8rem;
-  font-weight: 300;
-  color: #fff;
-}
-
+.wrap .section02 .txt h3,
 .wrap .section03 .txt h3 {
   font-family: "DM Sans";
   font-size: 3rem;
@@ -160,11 +150,13 @@ a {
   letter-spacing: 2px;
   color: #fff;
 }
+.wrap .section02 .txt p span,
 .wrap .section03 .txt p span {
   font-size: 1.8rem;
   font-weight: 300;
   color: #fff;
 }
+.wrap .section02 .more,
 .wrap .section03 .more {
   text-align: center;
   position: relative;
@@ -175,6 +167,7 @@ a {
   width: 150px;
   height: 40px;
 }
+.wrap .section02 .more a,
 .wrap .section03 .more a {
   color: #fff;
   font-size: 1.7rem;
@@ -182,6 +175,7 @@ a {
   text-align: center -120px;
   display: block;
 }
+.wrap .section02 .more:hover a,
 .wrap .section03 .more:hover a {
   text-decoration: underline;
 }
@@ -189,7 +183,7 @@ a {
 .wrap .section04 {
   width: 100%;
   height: 100vh;
-
+  background-image: url(../images/삼다수_bg4.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -221,7 +215,8 @@ a {
 }
 .wrap .bottxt {
   position: absolute;
-  width: 45rem;
+  width: 515px;
+  max-width: 90%;
   bottom: 90px;
   left: 180px;
   line-height: 1.6;
@@ -301,6 +296,7 @@ a {
   font-style: normal;
   font-size: 1.2rem;
   margin-bottom: 5px;
+  word-break: keep-all;
 }
 .wrap footer .footcopy {
   font-size: 1.6rem;
@@ -321,15 +317,59 @@ a {
 .wrap section:nth-of-type(3) {
   background-image: url(../images/삼다수_bg_G.png);
 }
+
 @media screen and (max-width: 1580px) {
   .wrap .top header .menu {
     gap: 10rem;
   }
 }
-@media screen and (max-width: 1720px) {
-}
-@media screen and (max-width: 1580px) {
-  .wrap .top header .menu {
-    gap: 10rem;
+@media screen and (max-width: 1200px) {
+  .wrap .water {
+    top: 55%;
   }
+  .wrap .water img {
+    width: 200px;
+  }
+  .wrap .top header .menu {
+    gap: 2rem;
+  }
+}
+@media screen and (max-width: 990px) {
+  .wrap .top header {
+    padding-top: 20px;
+  }
+  .wrap .top header .logo {
+    width: 10.5rem;
+    height: 4rem;
+  }
+  .wrap .top header .menu_open {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .wrap .section01 .txt h3,
+  .wrap .section02 .txt h3,
+  .wrap .section03 .txt h3 {
+    font-size: 1.7rem;
+  }
+  .wrap .section01 .txt p span,
+  .wrap .section02 .txt p span,
+  .wrap .section03 .txt p span {
+    font-size: 1.2rem;
+    font-weight: 200;
+  }
+
+  .wrap .water {
+    top: 30%;
+  }
+  .wrap .water img {
+    width: 135px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .wrap .water {
+    top: 50%;
+  }
+}
+@media screen and (max-width: 500px) {
 }
