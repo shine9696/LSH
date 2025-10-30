@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  transition: all 0.3s ease;
 }
 html {
   font-size: 62.5%;
@@ -138,9 +139,10 @@ a {
   transform: translate(-50%, -50%);
   z-index: 1;
 }
+
 .wrap .water img {
   width: 232px;
-  height: 100%;
+  height: auto;
 }
 .wrap .section02 .txt h3,
 .wrap .section03 .txt h3 {
@@ -385,6 +387,7 @@ a {
   .wrap .water {
     top: 30%;
   }
+
   .wrap .water img {
     width: 135px;
   }
@@ -393,6 +396,9 @@ a {
 @media screen and (max-width: 960px) {
   .wrap .water {
     top: 50%;
+  }
+  .wrap section .txt {
+    padding-bottom: 0px;
   }
 }
 @media screen and (max-width: 500px) {

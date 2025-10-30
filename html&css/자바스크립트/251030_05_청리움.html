@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>청리움</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      .wrap {
+        width: 90%;
+        max-width: 1721px;
+        padding: 48px 96px;
+      }
+      .list {
+        display: flex;
+        justify-content: space-between;
+      }
+      .txt {
+        display: flex;
+        gap: 20px;
+      }
+      .txt li a {
+        display: block;
+        border: 1px solid;
+        border-radius: 8px;
+        padding: 5px;
+      }
+      .wrap > p {
+        padding-top: 20px;
+      }
+      .wrap .visual {
+        padding-top: 50px;
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+      .wrap .visual.on {
+        height: 643px;
+      }
+      .wrap .visual p img {
+        width: 100%;
+        height: 643px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="list">
+        <h1>공간안내</h1>
+        <ul class="txt">
+          <li><a href="#">강당동</a></li>
+          <li><a href="">연수동</a></li>
+          <li><a href="">카페테리아</a></li>
+          <li><a href="">잔디마당</a></li>
+          <li><a href="">오하산방</a></li>
+          <li><a href="">약초원</a></li>
+          <li><a href="">명당 기도터</a></li>
+        </ul>
+      </div>
+      <p>
+        고즈넉한 자연 속 사계절의 아름다운 정취가 있는 청리움의 공간을
+        안내합니다
+      </p>
+      <div class="visual">
+        <p>
+          <img
+            src="https://www.cheongrium.com/static/images/spaceinfo/main_space_1.jpg"
+            alt=""
+          />
+        </p>
+        <p>
+          <img
+            src="https://www.cheongrium.com/static/images/spaceinfo/main_space_2.jpg"
+            alt=""
+          />
+        </p>
+        <p>
+          <img
+            src="https://www.cheongrium.com/static/images/spaceinfo/main_space_3.jpg"
+            alt=""
+          />
+        </p>
+        <p>
+          <img
+            src="https://www.cheongrium.com/static/images/spaceinfo/main_space_4.jpg"
+            alt=""
+          />
+        </p>
+        <p>
+          <img
+            src="https://www.cheongrium.com/static/images/spaceinfo/main_space_5.jpg"
+            alt=""
+          />
+        </p>
+        <p>
+          <img
+            src="https://www.cheongrium.com/static/images/spaceinfo/main_space_6.jpg"
+            alt=""
+          />
+        </p>
+        <p>
+          <img
+            src="https://www.cheongrium.com/static/images/spaceinfo/main_space_7.jpg"
+            alt=""
+          />
+        </p>
+      </div>
+    </div>
+  </body>
+  <script>
+    let btn = document.querySelectorAll(".txt li"); // li 모두 선택
+    let visual = document.querySelector(".visual"); // 이미지 영역 선택
+
+    btn.forEach(function (v, i) {
+      v.addEventListener("click", function (e) {
+        e.preventDefault(); // a태그 이동 막기
+
+        // 모든 버튼 비활성화
+        btn.forEach((el) => el.classList.remove("on"));
+        // 클릭한 버튼만 활성화 표시
+        v.classList.add("on");
+
+        // visual 영역 열기 (높이 0 → 643px)
+        visual.classList.add("on");
+
+        // 모든 이미지 숨기기
+        let imgs = visual.querySelectorAll("p");
+        imgs.forEach((el) => (el.style.display = "none"));
+
+        // 클릭한 li 순서에 맞는 이미지만 보이기
+        imgs[i].style.display = "block";
+      });
+    });
+  </script>
+</html>
