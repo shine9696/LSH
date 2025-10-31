@@ -17,7 +17,13 @@
             /></a>
           </p>
           <div class="menu">
-            <a href="#">KOR</a>
+            <div class="lang">
+              <p><a href="#">KOR</a></p>
+              <ul class="lang_menu">
+                <li><a href="#">ENG</a></li>
+                <li><a href="#">CHN</a></li>
+              </ul>
+            </div>
             <p class="menu_open">
               <a href="#"
                 ><img src="./images/삼다수_menu_b.png" alt="menu_b"
@@ -194,4 +200,31 @@
       <!--footer 끝-->
     </div>
   </body>
+  <script>
+    // const korBtn = document.querySelector(".lang p > a");
+    // const langMenu = document.querySelector(".lang_menu");
+
+    // korBtn.onclick = function (e) {
+    //   e.preventDefault();
+
+    //   // 클릭할 때 lang_menu에 on을 직접 붙이거나 제거
+    //   if (langMenu.classList.contains("on")) {
+    //     langMenu.classList.remove("on");
+    //   } else {
+    //     langMenu.classList.add("on");
+    //   }
+    // };
+
+    let btn = document.querySelector(".lang p > a");
+    let con = document.querySelector(".lang_menu");
+
+    btn.onclick = function (e) {
+      e.preventDefault();
+      if (con.classList.contains("on")) {
+        con.classList.remove("on");
+      } else {
+        con.classList.add("on");
+      }
+    };
+  </script>
 </html>

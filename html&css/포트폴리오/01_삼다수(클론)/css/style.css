@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
 }
 html {
   font-size: 62.5%;
@@ -51,26 +51,21 @@ a {
   display: flex;
   gap: 3rem;
 }
-.wrap .top header .menu a {
+.wrap .top header .lang {
+  position: relative;
+}
+
+.wrap .top header .lang a {
   font-size: 1.8rem;
   font-weight: 700;
   position: relative;
 }
-.wrap .top header .menu a::after {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  border: 1px solid #000;
-  border-radius: 10px;
-  background-color: orange;
-}
-.wrap .top header .menu a:hover {
+
+.wrap .top header .lang a:hover {
   text-underline-offset: 1px;
   text-decoration: underline;
 }
-.wrap .top header .menu > a::after {
+.wrap .top header .lang p > a::after {
   content: "▾";
   font-size: 1.4rem;
   margin-left: 0.3rem;
@@ -78,6 +73,28 @@ a {
   text-decoration: none;
   display: inline-block;
 }
+
+.wrap .top header .lang_menu {
+  position: absolute;
+  top: 30px;
+  left: -10px;
+  background-color: #d4d4d4;
+  border-radius: 10px;
+  border: 1px solid #d4d4d4;
+  padding: 10px 0;
+  width: 60px;
+  text-align: center;
+  display: none;
+}
+.wrap .top header .lang_menu.on {
+  display: block;
+}
+
+.wrap .top header .lang_menu a {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .wrap .top header .menu_open {
   width: 3rem;
   height: 3rem;
