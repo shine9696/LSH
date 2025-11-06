@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+      }
+      section > div {
+        width: 200px;
+        height: 200px;
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div data-aos="fade-right">fade-right</div>
+      <div data-aos="fade-left">fade-left</div>
+    </section>
+    <section>
+      <div data-aos="flip-left">flip-left</div>
+      <div data-aos="flip-right">flip-right</div>
+      <div
+        data-aos="flip-up"
+        data-aos-easing="ease-in-out-cubic"
+        data-aos-duration="3000"
+        data-aos-delay="1000"
+      >
+        flip-up
+      </div>
+      <div data-aos="flip-down">flip-down</div>
+    </section>
+    <section>
+      <div></div>
+    </section>
+    <section>
+      <div></div>
+    </section>
+    <section>
+      <div></div>
+    </section>
+  </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      //offset: 120, 기본값
+      delay: 1000,
+      easing: "ease",
+      duration: 2000,
+    });
+  </script>
+</html>
