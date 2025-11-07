@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      section {
+        height: 2000px;
+      }
+    </style>
+  </head>
+  <body>
+    <section></section>
+  </body>
+  <script>
+    window.addEventListener("wheel", function (e) {
+      console.log(e.deltaY);
+      if (e.deltaY > 0) {
+        console.log("마우스를 내리고 있어요");
+      } else if (e.deltaY < 0) {
+        console.log("마우스를 올리고 있어요");
+      }
+    }); // 마우스휠 했을 때 내려가는 동작
+  </script>
+</html>
