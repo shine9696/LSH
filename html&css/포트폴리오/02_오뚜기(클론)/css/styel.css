@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.wrap .top {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  z-index: 9999;
+}
+
+.wrap .top header {
+  width: 90%;
+  max-width: 155rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrap .top header .logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.wrap .top header .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wrap .top header .menutop {
+  display: flex;
+}
+.wrap .top header .menutop nav .menu {
+  display: flex;
+}
+.wrap .top header .wrap .top header .lang {
+  position: relative;
+}
+
+.wrap .top header .lang a {
+  font-size: 1.8rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.wrap .top header .lang a:hover {
+  text-underline-offset: 1px;
+  text-decoration: underline;
+}
+
+.wrap .top header .lang p > a::after {
+  content: "▾";
+  font-size: 1.4rem;
+  margin-left: 0.3rem;
+  vertical-align: middle;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.wrap .top header .lang_menu {
+  position: absolute;
+  top: 30px;
+  left: -10px;
+  background-color: #d4d4d4;
+  border-radius: 10px;
+  border: 1px solid #d4d4d4;
+  padding: 10px 0;
+  width: 60px;
+  text-align: center;
+  display: none;
+}
+
+.wrap .top header .lang_menu.on {
+  display: block;
+}
+
+.wrap .top header .lang_menu a {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.wrap .top header .menu_open {
+  width: 3rem;
+  height: 3rem;
+}
+
+.wrap .top header .menu_open a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.wrap .top header .menu_open img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
