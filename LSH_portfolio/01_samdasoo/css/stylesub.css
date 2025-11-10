@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+@font-face {
+  font-family: "DM Sans";
+  src: url("../webfont/DMSans-VariableFont_opsz\,wght.woff") format("woff");
+  font-weight: 100 700;
+}
 * {
   margin: 0;
   padding: 0;
@@ -93,6 +98,10 @@ a {
   font-size: 1.8rem;
   font-weight: 700;
 }
+.wrap .top header .lang a:hover {
+  text-underline-offset: 1px;
+  text-decoration: underline;
+}
 
 .wrap .top header .lang p > a::after {
   content: "▾";
@@ -104,9 +113,8 @@ a {
 }
 
 .wrap .top header .lang_menu {
-  position: absolute;
-  top: 30px;
-  left: -10px;
+  top: 0px;
+  left: -30px;
   background-color: #d4d4d4;
   border-radius: 10px;
   border: 1px solid #d4d4d4;
@@ -203,8 +211,8 @@ a {
   background-color: #f1f1f1;
   text-align: center;
 }
-.wrap .section02 h2 {
-  font-family: "DM sans";
+.wrap .section02 .history {
+  font-family: "DM Sans";
   font-size: 4rem;
   padding: 80px;
 }
@@ -240,24 +248,349 @@ a {
   color: #0e5ed5;
   transition: 1s ease-out;
 }
+.wrap .section02 .button {
+  width: 1705px;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .section02 .button .bleft,
+.wrap .section02 .button .bright {
+  font-size: 30px;
+  border-radius: 100px;
+  border: 1px solid #c6c6c6;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  color: #535353;
+  position: relative;
+  left: 150px;
+  top: 100px;
+  cursor: pointer;
+}
+
 .wrap .section02 .subtxt {
   width: 1525px;
   height: 194px;
+  display: flex;
+  margin: 0 auto;
   position: relative;
+  gap: 100px;
+  top: -40px;
   text-align: left;
 }
-.wrap .section02 .subtxt h2 {
-  position: absolute;
-  left: 120px;
-  top: -100px;
+.wrap .section02 .subtxt .yearbox {
+  position: relative;
+  left: -40px;
 }
-.wrap .section02 .subtxt ul {
-  position: absolute;
-  left: 200px;
-  top: 50px;
+.wrap .section02 .subtxt .yearbox h2 {
+  position: relative;
+  left: 80px;
+  margin: 40px 0 20px;
+  font-size: 3rem;
+}
+.wrap .section02 .subtxt .yearbox ul {
+  position: relative;
+  left: 80px;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+.wrap .section02 .subtxt .yearbox ul li {
+  color: #777777;
+}
+.wrap .section02 .subtxt .yearbox ul li span {
+  font-weight: bold;
+  margin-right: 30px;
+  box-sizing: border-box;
+  color: #000;
+}
+.wrap .section02 .subtxt .yearbox:nth-child(4) {
+  display: none;
+}
+
+.wrap .section03 li {
+  display: flex;
+  height: 770px;
+}
+.wrap .section03 li:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.wrap .section03 li > div,
+.wrap .section03 li > p {
+  flex: 1;
+  background-position: center;
+}
+.wrap .section03 li > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+.wrap .section03 li > div h4 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  font-family: "DM Sans";
+}
+.wrap .section03 li > div span {
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-family: "Noto Sans KR";
+}
+.wrap .section03 li > div h1 {
+  font-size: 3.7rem;
+  font-weight: 400;
+}
+.wrap .section03 li > div a {
+  margin-top: 50px;
+  display: inline-block;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
   font-size: 1.6rem;
 }
-/* 여기까지 */
+.wrap .section03 li > div a:hover {
+  text-decoration: underline;
+}
+.wrap .section03 li > div p {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.wrap .section03 li:nth-child(3) > div p,
+.wrap .section03 li:nth-child(4) > div p {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.wrap .section03 li:nth-child(3) > div,
+.wrap .section03 li:nth-child(4) > div {
+  color: #06f;
+}
+.wrap .section03 li:nth-child(3) > div a,
+.wrap .section03 li:nth-child(4) > div a {
+  color: #06f;
+  border: 1px solid #06f;
+}
+
+.wrap .section03 li:nth-child(1) > p {
+  background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/sub1/bg2.png);
+}
+.wrap .section03 li:nth-child(2) > p {
+  background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/sub1/bg3.png);
+}
+.wrap .section03 li:nth-child(3) > p {
+  background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/sub1/bg4.png);
+}
+.wrap .section03 li:nth-child(4) > p {
+  background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/sub1/bg5.png);
+}
+
+.wrap .section03 li:nth-child(1) > div {
+  background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_G.png);
+}
+.wrap .section03 li:nth-child(2) > div {
+  background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_B.png);
+}
+.wrap .section03 li:nth-child(3) > div {
+  background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_W.png);
+}
+.wrap .section03 li:nth-child(4) > div {
+  background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_W.png);
+}
+
+.wrap .section03 li > div h4 {
+  animation: slidedown1 1s ease-in-out;
+}
+@keyframes slidedown1 {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.wrap .section03 li > div h1 {
+  animation: slidedown2 1s ease-in-out 0.5s;
+}
+@keyframes slidedown2 {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.wrap .section03 li > div p,
+.wrap .section03 li > div a {
+  animation: slideup 1s ease-in-out 1s;
+}
+@keyframes slideup {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.wrap .section04 {
+  background: #f1f1f1;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.wrap .section04 p:first-child {
+  font-family: "DM Sans";
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 125px;
+  padding-top: 100px;
+}
+.wrap .section04 .botimg {
+  max-width: 1324px;
+  margin: 0 auto;
+}
+.wrap .section04 .botimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wrap .section04 P:nth-child(3) {
+  padding: 100px;
+}
+.wrap .section04 .contxt01 {
+  position: absolute;
+  text-align: left;
+  right: 700px;
+  top: 320px;
+  animation: slideright 0.5s;
+}
+@keyframes slideright {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.wrap .section04 .contxt02 {
+  position: absolute;
+  text-align: right;
+  right: 650px;
+  top: 700px;
+  animation: slideleft 0.5s;
+}
+@keyframes slideleft {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.wrap .section04 .contxt03 {
+  position: absolute;
+  text-align: left;
+  left: 600px;
+  top: 1000px;
+  animation: slideright2 0.5s;
+}
+@keyframes slideright2 {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.wrap .section04 .contxt04 {
+  position: absolute;
+  text-align: left;
+  right: 400px;
+  top: 1100px;
+  animation: slideright2 0.5s;
+}
+@keyframes slideright2 {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.wrap .section04 .contxt05 {
+  position: absolute;
+  text-align: right;
+  right: 650px;
+  bottom: 670px;
+  animation: slideleft3 0.5s;
+}
+@keyframes slideleft3 {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.wrap .section04 .contxt06 {
+  position: absolute;
+  text-align: left;
+  left: 350px;
+  bottom: 350px;
+  animation: slideright3 0.5s;
+}
+@keyframes slideright3 {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.wrap .section04 .contxt01 h3,
+.wrap .section04 .contxt02 h3,
+.wrap .section04 .contxt03 h3,
+.wrap .section04 .contxt04 h3,
+.wrap .section04 .contxt05 h3,
+.wrap .section04 .contxt06 h3 {
+  font-family: "DM Sans";
+  font-size: 2rem;
+  margin-bottom: 5px;
+  color: #222;
+}
+.wrap .section04 .contxt01 p,
+.wrap .section04 .contxt02 p,
+.wrap .section04 .contxt03 p,
+.wrap .section04 .contxt04 p,
+.wrap .section04 .contxt05 p,
+.wrap .section04 .contxt06 p {
+  font-size: 1.4rem;
+}
 
 /*footer 고정*/
 .wrap footer {
