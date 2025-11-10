@@ -3,7 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  /* transition: all 0.3s ease; */
+  transition: all 0.3s ease;
 }
 
 html {
@@ -59,39 +59,24 @@ a {
   object-fit: contain;
 }
 
-.wrap .top header .menutop {
+.wrap .top header .menu {
   display: flex;
-  gap: 30rem;
+  gap: 3rem;
 }
 
-.wrap .top header nav .menu {
-  display: flex;
-  gap: 5rem;
-}
-
-.wrap .top header nav .menu li a {
-  font-size: 1.8rem;
-}
-
-.wrap .top header nav .menu li:first-child a {
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
-  text-underline-offset: 6px;
-  text-decoration-color: #0066ff;
-  font-weight: 800;
-}
-
-.wrap .top header nav .menu li:hover a {
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
-  text-underline-offset: 6px;
-  text-decoration-color: #0066ff;
-  font-weight: 800;
+.wrap .top header .lang {
+  position: relative;
 }
 
 .wrap .top header .lang a {
   font-size: 1.8rem;
   font-weight: 700;
+  position: relative;
+}
+
+.wrap .top header .lang a:hover {
+  text-underline-offset: 1px;
+  text-decoration: underline;
 }
 
 .wrap .top header .lang p > a::after {
@@ -125,25 +110,45 @@ a {
   font-weight: 400;
 }
 
-.wrap .section01 {
+.wrap .top header .menu_open {
+  width: 3rem;
+  height: 3rem;
+}
+
+.wrap .top header .menu_open a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.wrap .top header .menu_open img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.wrap section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100vh;
-  background-image: url(../images/삼다수_sub_bg1.jpg);
-  background-size: cover;
-  background-attachment: fixed;
 }
 
-.wrap .section01 .main {
+.wrap section > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap section .txt {
+  text-align: center;
+  top: -105px;
   position: relative;
+  margin: 0 auto;
+  animation: ani 1.5s;
 }
 
-.wrap .section01 .visual01 {
-  position: absolute;
-  left: 200px;
-  top: 300px;
-  animation: tbani 1s ease-in-out;
-}
-@keyframes tbani {
+@keyframes ani {
   0% {
     transform: translateY(-50px);
     opacity: 0;
@@ -155,15 +160,140 @@ a {
   }
 }
 
-.wrap .section01 .visual01 img {
-  width: 64.6rem;
-  height: 100%;
-  object-fit: cover;
+.wrap .section01 .txt h3 {
+  font-family: "DM Sans";
+  font-size: 3rem;
+  font-weight: 1000;
+  letter-spacing: 2px;
+  color: #0066ff;
 }
-.wrap .section01 .sub {
-  animation: btani 1.5s ease-in-out;
+
+.wrap .section01 .txt p span {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #777;
 }
-@keyframes btani {
+
+.wrap section p.visual {
+  position: relative;
+  z-index: 2;
+}
+
+.wrap p.txtimg img {
+  width: 100%;
+}
+
+.wrap .water {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.wrap .water img {
+  width: 232px;
+  height: auto;
+}
+
+.wrap .section02 .txt h3,
+.wrap .section03 .txt h3 {
+  font-family: "DM Sans";
+  font-size: 3rem;
+  font-weight: 1000;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.wrap .section02 .txt p span,
+.wrap .section03 .txt p span {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.wrap .section02 .more,
+.wrap .section03 .more {
+  text-align: center;
+  position: relative;
+  top: 150px;
+  margin: 0 auto;
+  border: 5px solid #fff;
+  border-radius: 50px;
+  width: 150px;
+  height: 40px;
+}
+
+.wrap .section02 .more a,
+.wrap .section03 .more a {
+  color: #fff;
+  font-size: 1.7rem;
+  line-height: 40px;
+  text-align: center -120px;
+  display: block;
+}
+
+.wrap .section02 .more:hover a,
+.wrap .section03 .more:hover a {
+  text-decoration: underline;
+}
+
+.wrap .section04 {
+  width: 100%;
+  height: 128rem;
+  background-image: url(../images/bg4.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.wrap .section04 .active {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.wrap .section04 .txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 30px;
+}
+
+.wrap .section04 .txt h1,
+.wrap .section04 .txt span {
+  font-family: "";
+  font-size: 3.7rem;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.wrap .section04 .txt h1 {
+  font-weight: 300;
+  color: #2d2d2d;
+}
+
+.wrap .section04 .txt h1 span {
+  font-weight: 500;
+  color: #0066ff;
+}
+
+.wrap .section04 .txt p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.wrap .section04 .bottxt {
+  color: #fff;
+  animation: move 1.5s;
+}
+
+@keyframes move {
   0% {
     transform: translateY(50px);
     opacity: 0;
@@ -174,79 +304,51 @@ a {
     opacity: 1;
   }
 }
-.wrap .section01 .visual02 {
-  position: absolute;
-  right: 490px;
-  bottom: -680px;
+
+.wrap .bottitle {
+  width: 100%;
+  position: relative;
+  left: 200px;
+  top: 300px;
 }
 
-.wrap .section01 .visual02 img {
-  width: 20rem;
-  height: 100%;
-  object-fit: cover;
+.wrap .bottitle h1 {
+  font-family: "DM Sans";
+  font-size: 3.3rem;
+  font-weight: bold;
+  margin-bottom: 25px;
 }
 
-.wrap .section01 .txt {
-  text-align: left;
-  top: 700px;
-  right: 150px;
-  position: absolute;
-  margin: 0 auto;
-  font-size: 1.9rem;
+.wrap .bottitle p {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.wrap .link_txt {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  left: 10.5%;
+  top: 350px;
+  gap: 20px;
+}
+
+.wrap .link_txt .insta a {
+  font-size: 2rem;
   color: #fff;
 }
 
-.wrap .section02 {
-  width: 100%;
-  height: 77.5rem;
-  background-color: #f1f1f1;
-  text-align: center;
-}
-.wrap .section02 h2 {
-  font-family: "DM sans";
-  font-size: 4rem;
-  padding: 80px;
-}
-.wrap .section02 .tittxt {
-  width: 1500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-left: 200px;
-  position: relative;
-}
-.wrap .section02 .tittxt ul {
-  width: 1500px;
-  margin-bottom: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8rem;
-  font-size: 5rem;
-  cursor: pointer;
-  font-weight: bold;
-  border-bottom: 1px solid #ccc;
+.wrap .link_txt .insta a:hover,
+.wrap .link_txt .youtu a:hover {
+  text-decoration: underline;
 }
 
-.wrap .section02 .tittxt ul li:first-child {
-  color: #0e5ed5;
-  border-bottom: 3px solid #0e5ed5;
-}
-.wrap .section02 .tittxt ul li {
-  color: #c8c7c7;
-}
-.wrap .section02 .tittxt ul li:hover {
-  color: #0e5ed5;
-  transition: 1s ease-out;
-}
-/* 여기까지 */
-
-.wrap .section02 .subtxt {
-  text-align: left;
-  left: 200px;
+.wrap .link_txt .youtu a {
+  font-size: 2rem;
+  color: #fff;
+  margin-top: 20px;
 }
 
-/*footer 고정*/
 .wrap footer {
   background-color: #0e0c0c;
   height: 100%;
@@ -328,6 +430,18 @@ a {
   width: 232px;
 }
 
+.wrap section:nth-of-type(1) {
+  background-image: url(../images/bg_W.png);
+}
+
+.wrap section:nth-of-type(2) {
+  background-image: url(../images/bg_B.png);
+}
+
+.wrap section:nth-of-type(3) {
+  background-image: url(../images/bg_G.png);
+}
+
 @media screen and (max-width: 1580px) {
   .wrap .top header .menu {
     gap: 10rem;
@@ -339,9 +453,7 @@ a {
 
   .wrap .link_txt {
     flex-direction: row;
-
     gap: 4%;
-
     left: 40%;
   }
 }
@@ -367,13 +479,11 @@ a {
 
   .wrap .top header .logo {
     width: 10.5rem;
-
     height: 4rem;
   }
 
   .wrap .top header .menu_open {
     width: 2.5rem;
-
     height: 2.5rem;
   }
 
@@ -387,7 +497,6 @@ a {
   .wrap .section02 .txt p span,
   .wrap .section03 .txt p span {
     font-size: 1.2rem;
-
     font-weight: 200;
   }
 
@@ -410,19 +519,16 @@ a {
   .wrap .section04 .txt h1,
   .wrap .section04 .txt span {
     font-size: 2rem;
-
     letter-spacing: -1px;
   }
 
   .wrap .section04 .txt p {
     font-size: 1.2rem;
-
     letter-spacing: -1px;
   }
 
   .wrap .section04 .bottitle {
     left: 20px;
-
     top: -50px;
   }
 
@@ -438,13 +544,9 @@ a {
 
   .wrap .link_txt {
     top: -100px;
-
     left: 90%;
-
     display: flex;
-
     flex-direction: column;
-
     gap: 10px;
   }
 
