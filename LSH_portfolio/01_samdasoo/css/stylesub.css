@@ -226,6 +226,7 @@ a {
   font-size: 5rem;
   cursor: pointer;
   font-weight: bold;
+  border-bottom: 1px solid #d6d6d6;
 }
 
 .wrap .section02 .tittxt ul li:first-child {
@@ -239,10 +240,22 @@ a {
   color: #0e5ed5;
   transition: 1s ease-out;
 }
-
 .wrap .section02 .subtxt {
+  width: 1525px;
+  height: 194px;
+  position: relative;
   text-align: left;
+}
+.wrap .section02 .subtxt h2 {
+  position: absolute;
+  left: 120px;
+  top: -100px;
+}
+.wrap .section02 .subtxt ul {
+  position: absolute;
   left: 200px;
+  top: 50px;
+  font-size: 1.6rem;
 }
 /* 여기까지 */
 
