@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>제주삼다수_메인</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <div class="wrap">
@@ -27,25 +36,45 @@
             <p class="menu_open">
               <a href="#"><img src="./images/menu_b.png" alt="menu_b" /></a>
             </p>
-
-            <!--메뉴-->
-            <!-- <div class="menu_inner"> 
-              <ul class="gnb"> 
-                <li><a href="#">STORY</a></li> 
-                <li><a href="#">GREEN</a></li> 
-                <li><a href="#">NEWS</a></li> 
-                <li><a href="#">FAQ</a></li> 
-                <li><a href="#">PRODUCTS</a></li> 
-                <li><a href="#">EVENT</a></li> 
-              </ul> 
-            </div> -->
           </div>
         </header>
-
         <!--header 끝-->
       </div>
+      <nav>
+        <div class="navWarp">
+          <div class="top">
+            <p>
+              <a href="#">
+                <img
+                  src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/foot_logo.png"
+                  alt=""
+                />
+              </a>
+            </p>
+            <p class="close">
+              <span class="material-symbols-outlined"> close </span>
+            </p>
+          </div>
+          <ul>
+            <li><a href="#">story</a></li>
+            <li><a href="#">green</a></li>
+            <li><a href="#">news</a></li>
+            <li><a href="#">faq</a></li>
+            <li><a href="#">products</a></li>
+            <li><a href="#">event</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div id="page">
+        <ul>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+      </div>
 
-      <section class="section01">
+      <section class="section01" id="section01">
         <div>
           <div class="txt">
             <h3>THE WATER</h3>
@@ -70,9 +99,9 @@
 
       <!--section01 끝-->
 
-      <section class="section02">
+      <section class="section02" id="section02">
         <div>
-          <div class="txt">
+          <div class="txt" data-aos="ani">
             <h3>ONLY ONE</h3>
             <p><span>진정한 제주다움 실현</span></p>
           </div>
@@ -93,9 +122,9 @@
 
       <!--section02 끝-->
 
-      <section class="section03">
+      <section class="section03" id="section03">
         <div>
-          <div class="txt">
+          <div class="txt" data-aos="ani">
             <h3>SUSTAINABLE</h3>
             <p><span>제주의 청정 자연과 공존하는 제주삼다수</span></p>
           </div>
@@ -116,9 +145,9 @@
 
       <!--section03 끝-->
 
-      <section class="section04">
+      <section class="section04" id="section04">
         <div class="active">
-          <div class="txt">
+          <div class="txt" data-aos="ani">
             <h1>
               무려 106개의 관측망이<br />
               <span>한 눈 팔지 않고</span> 지키는 물
@@ -131,7 +160,7 @@
           </div>
 
           <div class="bottxt">
-            <div class="bottitle">
+            <div class="bottitle" data-aos="aniup">
               <h1>MORE STORY</h1>
 
               <p>
@@ -140,7 +169,7 @@
               </p>
             </div>
 
-            <div class="link_txt">
+            <div class="link_txt" data-aos="aniup">
               <p class="insta">
                 <a
                   href="https://www.instagram.com/samdasoostory/#"
@@ -236,6 +265,7 @@
 
       <!--footer 끝-->
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

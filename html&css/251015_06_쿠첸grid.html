@@ -3,109 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>제주삼다수 테스트</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
     <style>
-      * {
-        margin: 0;
-        padding: 0;
+      body {
+        background: #222;
       }
-      ul {
-        list-style: none;
-      }
-      a {
-        text-decoration: none;
-        color: #ccc;
-      }
-      .main {
-        width: 1905px;
-        margin: 0 auto;
-      }
-      .main .txt {
-        width: 1905px;
-        margin: 50px auto;
-        text-align: center;
-      }
-      .main .txt h1 {
-        padding: 100px;
-      }
-      .main .txt p {
-        width: 1905px;
-        display: flex;
-        justify-content: flex-start;
-        text-align: start;
-        margin-left: 300px;
-      }
-      .main .con {
-        display: grid;
-        width: 1350px;
-        height: 570px;
-        margin: 0 auto;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 1fr 1fr;
-        gap: 15px;
-      }
-      .main .item {
-        width: 100%;
-        overflow: hidden;
-      } /*이미지를 fr로 비율대로 주었을 때 이미지 크기가 다 다르므로 
-          a이미지가 2배 커졌을 때 b,c 이미지도 2배 커지려는 성질이 있다. 
-          이 때, item 전체에 overflow:hidden을 주면 같이 커지려는 이미지를 숨겨주므로 적용시켜주자.
-          아니면 grid-template-rows를 px로 고정시키면 해결~  2가지 방법있음! */
 
-      .main .con .item:nth-child(3) {
-        grid-column: 3 / span 2;
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
       }
-      .main .con .item:nth-child(4) {
-        grid-column: 1 / span 2;
-      }
-      .item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+
+      nav .navWarp .top .close {
+        position: relative;
+        right: 200px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 30rem; /* ✅ 아이콘 크기 */
       }
     </style>
   </head>
   <body>
-    <div class="main">
-      <div class="txt">
-        <h1>
-          쿠첸 B2B 사업은 고객사와 개인의 필요에 맞는 맞춤 제품 및 서비스 제공을
-          통해<br />
-          최상의 만족도를 제공해 드립니다.
-        </h1>
-        <p>
-          쿠첸은 2013년부터 현재까지 약 10년 이상의 전기레인지 자체 개발을
-          바탕으로 혁신적인 기술력과 신뢰성을 보유하고 있습니다.<br />
-          국내 최초 하이브리드 기술의 전기레인지 개발을 시작으로 국내 최초
-          분리형 하방 배기 후드의 제조 및 생산, 국내 최다 27종 안정장치 기능
-          등<br />
-          탄탄한 안정성을 기반으로 깐깐한 B2B 건설 시장을 리딩하고 있습니다.<br />
-          최초 쿠첸을 경험하신 고객사는 검증된 기술, 우수한 디자인, 브랜드
-          신뢰를 바탕으로 꾸준히 쿠첸을 찾고 있습니다.<br />
-          쿠첸 B2B 비즈니스는 고객사 및 개인 소비자분들의 최상의 만족도를
-          달성하기 위해 언제나 최선을 다하겠습니다.
-        </p>
+    <nav>
+      <div class="navWarp">
+        <div class="top">
+          <p>
+            <a href="#">
+              <img
+                src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/foot_logo.png"
+                alt=""
+              />
+            </a>
+          </p>
+          <p class="close">
+            <span class="material-symbols-outlined">close</span>
+          </p>
+        </div>
+        <ul>
+          <li><a href="#">story</a></li>
+          <li><a href="#">green</a></li>
+          <li><a href="#">news</a></li>
+          <li><a href="#">faq</a></li>
+          <li><a href="#">products</a></li>
+          <li><a href="#">event</a></li>
+        </ul>
       </div>
-      <div class="con">
-        <div class="item">
-          <img src="	https://www.cuchen.com/img/b2b_info_01.jpg" alt="" />
-        </div>
-        <div class="item">
-          <img src="https://www.cuchen.com/img/b2b_info_02.jpg" alt="" />
-        </div>
-        <div class="item">
-          <img src="	https://www.cuchen.com/img/b2b_info_03.jpg" alt="" />
-        </div>
-        <div class="item">
-          <img src="	https://www.cuchen.com/img/b2b_info_04.jpg" alt="" />
-        </div>
-        <div class="item">
-          <img src="	https://www.cuchen.com/img/b2b_info_05.jpg" alt="" />
-        </div>
-        <div class="item">
-          <img src="	https://www.cuchen.com/img/b2b_info_06.jpg" alt="" />
-        </div>
-      </div>
-    </div>
+    </nav>
   </body>
 </html>
