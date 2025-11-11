@@ -217,7 +217,8 @@ a {
   padding: 80px;
 }
 .wrap .section02 .tittxt {
-  width: 1500px;
+  width: 100%;
+  max-width: 1500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -225,7 +226,8 @@ a {
   position: relative;
 }
 .wrap .section02 .tittxt ul {
-  width: 1500px;
+  width: 100%;
+  max-width: 1500px;
   margin-bottom: 100px;
   display: flex;
   justify-content: center;
@@ -248,13 +250,15 @@ a {
   color: #0e5ed5;
   transition: 1s ease-out;
 }
-.wrap .section02 .button {
-  width: 1705px;
+.wrap .section02 .box {
+  width: 100%;
+  max-width: 1705px;
   display: flex;
   justify-content: space-between;
+  gap: 50px;
 }
-.wrap .section02 .button .bleft,
-.wrap .section02 .button .bright {
+.wrap .section02 .bleft,
+.wrap .section02 .bright {
   font-size: 30px;
   border-radius: 100px;
   border: 1px solid #c6c6c6;
@@ -263,8 +267,8 @@ a {
   line-height: 50px;
   color: #535353;
   position: relative;
-  left: 150px;
-  top: 100px;
+  left: 0px;
+  top: 0px;
   cursor: pointer;
 }
 
