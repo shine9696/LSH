@@ -1,0 +1,272 @@
+@charset "utf-8";
+@font-face {
+  font-family: "오뚜기산스 Light";
+  src: url("../webfont/OttogiSans-Light.woff") format("woff");
+  font-weight: 100 700;
+}
+@font-face {
+  font-family: "오뚜기산스 Medium";
+  src: url("../webfont/OttogiSans-Medium.woff") format("woff");
+  font-weight: 100 700;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.wrap .top {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  z-index: 10;
+}
+
+.wrap .top header {
+  width: 90%;
+  max-width: 1750px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrap .top header .logo a {
+  display: block;
+  width: 58px;
+  height: 58px;
+}
+
+.wrap .top header .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wrap .top nav {
+  width: 90%;
+}
+.wrap .top nav .menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+.wrap .top nav .menu li a {
+  word-break: keep-all;
+  font-size: 1.8rem;
+  font-family: "오뚜기산스 Medium";
+  color: #fff;
+}
+.wrap .top header .lang {
+  position: relative;
+  left: -50px;
+}
+.wrap .top header .lang p a::after {
+  content: "▾";
+  font-size: 2rem;
+  padding-left: 5px;
+  vertical-align: middle;
+  text-decoration: none;
+  position: absolute;
+  top: -2px;
+}
+.wrap .top header .lang p a {
+  font-size: 1.6rem;
+  font-family: "오뚜기산스 Medium";
+  color: #fff;
+}
+
+.wrap .top header .lang_menu {
+  position: absolute;
+  top: 40px;
+  left: -30px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  padding: 15px 30px;
+  text-align: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.wrap .top header .lang_menu.on {
+  opacity: 1;
+}
+.wrap .top header .lang_menu a:hover {
+  text-decoration: underline;
+}
+.wrap .top header .lang_menu li:nth-child(1) a {
+  font-size: 1.4rem;
+  font-family: "오뚜기산스 Medium";
+}
+.wrap .top header .lang_menu li:nth-child(2) {
+  margin-top: 12px;
+}
+.wrap .top header .lang_menu li:nth-child(2) a {
+  font-size: 1.4rem;
+  font-family: "오뚜기산스 Light";
+}
+.wrap .top header .lang_menu li:nth-child(2) a:hover {
+  font-family: "오뚜기산스 Medium";
+}
+
+.wrap .top header .topright {
+  height: 33px;
+  line-height: 33px;
+  display: flex;
+  gap: 30px;
+}
+
+.wrap .top header .topright div:nth-child(3) p {
+  border-radius: 8px;
+  background-color: #fffc29;
+  width: 100px;
+  height: 28px;
+  text-align: center;
+}
+/*swiper 시작*/
+.wrap .section01 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.wrap .section01 .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wrap .swiper-slide span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 8rem;
+  font-family: "오뚜기산스 Medium";
+  text-align: center;
+}
+.wrap .swiper-slide-active span {
+  opacity: 1;
+}
+
+/* 컨트롤 전체 */
+.wrap .control-bar {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #fff;
+  font-family: "오뚜기산스 Medium";
+  z-index: 20;
+}
+
+/* 숫자 영역 */
+.wrap .fraction {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.wrap .fraction .current {
+  font-weight: 900;
+}
+.wrap .fraction .total {
+  opacity: 0.6;
+}
+
+/* 진행바 (얇은 라인) */
+.wrap .progress-line {
+  position: relative;
+  width: 200px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+}
+.wrap .progress-line span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #fff;
+  width: 0%;
+  transition: width 0.8s ease-in-out;
+}
+
+/* 버튼 영역 */
+.wrap .control-btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.wrap .control-btn button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.wrap .control-btn button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+}
+
+.wrap .material-symbols-outlined {
+  font-size: 22px;
+}
+
+.wrap .section02 {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+.wrap .section02 p {
+  width: 93px;
+  height: 90px;
+  margin: 30px auto;
+}
+.wrap .section02 p img {
+  width: 100%;
+  object-fit: cover;
+}
+.wrap .section02 p:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+}

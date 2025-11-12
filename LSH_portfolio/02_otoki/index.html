@@ -4,7 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>오뚜기_메인</title>
-    <link rel="stylesheet" href="./css/styel.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+     <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -15,43 +23,93 @@
             <a href="#"><img src="./images/logo_wh.png" alt="logo" /></a>
           </p>
 
-          <div class="menutop">
-            <nav>
-              <ul class="menu">
-                <li><a href="#">회사소개</a></li>
-                <li><a href="#">ESG경영</a></li>
-                <li><a href="#">제품 이야기</a></li>
-                <li><a href="#">브랜드경험</a></li>
-                <li><a href="#">홍보센터</a></li>
-                <li><a href="#">고객 서비스</a></li>
-              </ul>
-            </nav>
+          <nav>
+            <ul class="menu">
+              <li><a href="#">회사소개</a></li>
+              <li><a href="#">ESG경영</a></li>
+              <li><a href="#">제품 이야기</a></li>
+              <li><a href="#">브랜드경험</a></li>
+              <li><a href="#">홍보센터</a></li>
+              <li><a href="#">고객 서비스</a></li>
+            </ul>
+          </nav>
 
-            <div class="topright">
-              <div class="lang">
-                <p><a href="#">KR</a></p>
-                <ul class="lang_menu">
-                  <li><a href="#">KR</a></li>
-                  <li><a href="#">EN</a></li>
-                </ul>
-              </div>
-              <div class="search">
-                <p><img src="./images/gnb_search.png" alt="search" /></p>
-              </div>
-              <div class="chatbot">
-                <p>
-                  <img src="./images/gnb_chatbot.png" alt="chatbot" />
-                </p>
-              </div>
-              <div class="mall">
-                <p><img src="./images/gnb_mall.png" alt="mall" /></p>
-              </div>
+          <div class="lang">
+            <p><a href="#">KR</a></p>
+            <ul class="lang_menu">
+              <li><a href="#">KR</a></li>
+              <li><a href="#">EN</a></li>
+            </ul>
+          </div>
+
+          <div class="topright">
+            <div class="search">
+              <p><a href="#"><img src="./images/gnb_search.png" alt="search" /></a></p>
+            </div>
+            <div class="chatbot">
+              <p>
+                <a href="#"><img src="./images/gnb_chatbot.png" alt="chatbot" /></a>
+              </p>
+            </div>
+            <div class="mall">
+              <p><a href="#"><img src="./images/gnb_mall.png" alt="mall" /></p></a>
             </div>
           </div>
         </header>
         <!--header 끝-->
       </div>
+      <!--top 끝-->
+
+<section class="section01">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><p><img src="./images/visual1.jpg" alt="visual1"></p></div>
+      <div class="swiper-slide"><p><img src="./images/visual2.jpg" alt="visual2"></p></div>
+      <div class="swiper-slide"><p><img src="./images/visual3.jpg" alt="visual3"></p></div>
+      <div class="swiper-slide">
+        <p><img src="./images/visual4.jpg" alt="visual4"></p>
+        <span>맛과 품질을 가장 소중히<br>생각하고 행동합니다</span>
+      </div>
+      <div class="swiper-slide"><p><img src="./images/visual5.jpg" alt="visual5"></p>
+      <span>식품안전문화 정착을 위해<br>노력하고 있습니다</span></div>
+      <div class="swiper-slide"><p><img src="./images/visual6.jpg" alt="visual6"></p>
+      <span>소비자가 필요로 하고<br>소비자에게 편리한 제품을<br>만들어 갑니다</span></div>
     </div>
-    <section></section>
+  </div>
+
+  <div class="control-bar">
+    <div class="fraction">
+      <span class="current">01</span>
+      <div class="progress-line"><span></span></div>
+      <span class="total">06</span>
+    </div>
+
+    <div class="control-btn">
+      <button class="btn-pause">
+        <span class="material-symbols-outlined">pause</span>
+      </button>
+      <button class="btn-play">
+        <span class="material-symbols-outlined">play_arrow</span>
+      </button>
+      <button class="btn-prev">
+        <span class="material-symbols-outlined">chevron_left</span>
+      </button>
+      <button class="btn-next">
+        <span class="material-symbols-outlined">chevron_right</span>
+      </button>
+    </div>
+  </div>
+</section>
+      <!--section01 끝-->
+      
+      <section class="section02">
+      <p><img src="./images/ico_scrol.png" alt="scroll"></p>
+      <p><img src="./images/ico_scroll_arw.png" alt="arw"></p>
+      </section>
+
+
+    </div>
+     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
