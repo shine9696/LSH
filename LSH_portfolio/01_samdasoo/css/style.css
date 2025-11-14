@@ -195,14 +195,14 @@ nav ul li a:hover {
 #page {
   position: fixed;
   right: 100px;
-  top: 50%;
+  top: 40%;
   transform: translateX(-50%);
   z-index: 9999;
 }
 #page ul {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 40px;
 }
 #page ul li a {
   display: block;

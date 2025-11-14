@@ -60,3 +60,20 @@ btnPlay.addEventListener("click", () => {
 // 이전/다음 버튼
 btnNext.addEventListener("click", () => swiper.slideNext());
 btnPrev.addEventListener("click", () => swiper.slidePrev());
+
+const items = document.querySelectorAll(".section04 ul li");
+
+items.forEach((li) => {
+  li.addEventListener("mouseenter", function () {
+    items.forEach((el) => el.classList.remove("on"));
+    this.classList.add("on");
+  });
+});
+
+AOS.init({
+  //offset: 120, 기본값
+  delay: 0,
+  easing: "ease out",
+  duration: 500,
+  once: false,
+});
