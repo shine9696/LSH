@@ -39,7 +39,7 @@ a {
   color: #fff;
 }
 body {
-  background-color: #0a0a0f;
+  background-color: #111111;
   overflow-x: hidden;
   /* 전체 페이지 가로 스크롤 차단 */
 }
@@ -80,7 +80,7 @@ body {
 
 #fullpage {
   max-width: 1920px;
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
 }
 .landing {
@@ -317,6 +317,7 @@ header .top nav ul li {
   top: 100px;
 }
 .section01 .profile {
+  width: 90%;
   position: relative;
   top: 15vh;
   left: 5px;
@@ -354,12 +355,16 @@ header .top nav ul li {
   position: relative;
   top: 250px;
   left: 5px;
+  padding-top: 20px;
 }
 .section01 .keywords {
   display: flex;
   gap: 20px;
+  padding-top: 10px;
 }
 .section01 .keywords2 {
   display: flex;
   gap: 20px;
+}
+.section01 .keywords > p:nth-child(1) {
 }
