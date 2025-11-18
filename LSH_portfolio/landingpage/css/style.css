@@ -367,3 +367,5 @@ header .top nav ul li {
   display: flex;
   gap: 20px;
 }
+.section01 .keywords > p:nth-child(1) {
+}
