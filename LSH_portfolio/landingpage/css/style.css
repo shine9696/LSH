@@ -39,7 +39,7 @@ a {
   color: #fff;
 }
 body {
-  background-color: #0a0a0f;
+  background-color: #0f0f0f;
   overflow-x: hidden;
   /* 전체 페이지 가로 스크롤 차단 */
 }
@@ -47,7 +47,7 @@ body {
   position: fixed;
   top: 3vw;
   right: 5%;
-  z-index: 9999;
+  z-index: 1000;
 }
 .gnb-wrap ul {
   display: flex;
@@ -62,7 +62,7 @@ body {
   position: fixed;
   top: 3vw;
   right: 5%;
-  z-index: 9999;
+  z-index: 1000;
 }
 
 .menu-fixed ul {
@@ -80,7 +80,7 @@ body {
 
 #fullpage {
   max-width: 1920px;
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
 }
 .landing {
@@ -98,29 +98,29 @@ body {
 
 .landing .line.top {
   top: 40px;
-  left: -40px;
-  right: -40px;
+  left: -1vw;
+  right: -1vw;
   height: 1px;
 }
 
 .landing .line.bottom {
   bottom: 40px;
-  left: -40px;
-  right: -40px;
+  left: -1vw;
+  right: -1vw;
   height: 1px;
 }
 
 .landing .line.left {
   top: 40px;
   bottom: 40px;
-  left: -40px;
+  left: -1vw;
   width: 1px;
 }
 
 .landing .line.right {
   top: 40px;
   bottom: 40px;
-  right: -40px;
+  right: -1vw;
   width: 1px;
 }
 
@@ -275,6 +275,7 @@ header .top nav ul li {
   height: 100vh;
   margin: 0 auto;
 }
+
 .section01 .tit {
   position: relative;
   display: flex;
@@ -317,6 +318,7 @@ header .top nav ul li {
   top: 100px;
 }
 .section01 .profile {
+  width: 90%;
   position: relative;
   top: 15vh;
   left: 5px;
@@ -354,10 +356,12 @@ header .top nav ul li {
   position: relative;
   top: 250px;
   left: 5px;
+  padding-top: 20px;
 }
 .section01 .keywords {
   display: flex;
   gap: 20px;
+  padding-top: 10px;
 }
 .section01 .keywords2 {
   display: flex;

@@ -66,3 +66,16 @@ AOS.init({
   duration: 1000,
   once: false,
 });
+
+//scrollup 버튼
+document.querySelector(".scrollup a").onclick = function (e) {
+  e.preventDefault();
+  function moveUp() {
+    let now = window.pageYOffset;
+    if (now > 0) {
+      window.scrollTo(0, now - 100);
+      requestAnimationFrame(moveUp);
+    }
+  }
+  moveUp();
+};

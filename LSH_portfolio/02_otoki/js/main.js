@@ -84,7 +84,7 @@ document.querySelector(".btn_top a").onclick = function (e) {
   function moveUp() {
     let now = window.pageYOffset;
     if (now > 0) {
-      window.scrollTo(0, now - 100);
+      window.scrollTo(0, now - 200);
       requestAnimationFrame(moveUp);
     }
   }

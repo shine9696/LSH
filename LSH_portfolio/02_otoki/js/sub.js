@@ -11,7 +11,7 @@ btn.addEventListener("click", (e) => {
 AOS.init({
   //offset: 120,
   delay: 0,
-  easing: "ease out",
+  easing: "ease",
   duration: 500,
   once: false,
 });
@@ -22,7 +22,7 @@ document.querySelector(".btn_top a").onclick = function (e) {
   function moveUp() {
     let now = window.pageYOffset;
     if (now > 0) {
-      window.scrollTo(0, now - 100);
+      window.scrollTo(0, now - 200);
       requestAnimationFrame(moveUp);
     }
   }
@@ -41,33 +41,17 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// let tap = document.querySelector(".tap");
-// let tapTop = tap.offsetTop; // tap의 원래 위치 Y값 저장
-
-// window.addEventListener("scroll", function () {
-//   if (window.pageYOffset >= tapTop - 0) {
-//     // 헤더 높이만큼 보정
-//     tap.classList.add("fixed");
-//   } else {
-//     tap.classList.remove("fixed");
-//   }
-// });
 const tap = document.querySelector(".tap");
 const tapTop = tap.offsetTop;
 const tapHeight = tap.offsetHeight;
 
 window.addEventListener("scroll", () => {
   if (window.pageYOffset >= tapTop) {
-    // fixed 상태 부여 (항상 고정)
     tap.classList.add("fixed");
-
-    // 처음 fixed될 때만 부드러운 등장 애니메이션
     tap.classList.add("before-fixed");
     setTimeout(() => {
       tap.classList.remove("before-fixed");
     }, 10);
-
-    // 아래 콘텐츠가 튀지 않도록 빈 공간 유지
     tap.parentElement.style.paddingBottom = tapHeight + "px";
   } else {
     // 원래 위치로 돌아감

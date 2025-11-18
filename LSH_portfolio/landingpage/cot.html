@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 라벨 박스 */
+      .label-box {
+        margin-bottom: 60px;
+        position: relative;
+      }
+
+      /* 🔥 영화 스타일 라벨 */
+      .film-label {
+        display: inline-block;
+        padding: 6px 18px;
+        background: rgba(255, 255, 255, 0.95);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        font-family: "DMSerif Display";
+        font-size: 1.7rem;
+        letter-spacing: 1px;
+        position: relative;
+        color: #000;
+        z-index: 5;
+
+        /* 라벨을 더 영화스럽게 */
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(1px);
+      }
+
+      /* 🔥 라벨 아래 카메라 Flicker 라인 */
+      .film-label::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 100%;
+        height: 2px;
+
+        /* 카메라 반사광 느낌 */
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.7) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+
+        opacity: 0;
+        transform: scaleX(0.4);
+        transform-origin: center;
+      }
+
+      /* 설명 텍스트 */
+      .label-box .desc {
+        font-size: 1.4rem;
+        margin-top: 10px;
+        color: #ddd;
+      }
+      /* 라벨 내부에 라인 추가 */
+      .film-label span.line {
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.7) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="about-section section01">
+      <div class="label-box">
+        <div class="film-label">EDUCATION</div>
+        <span class="line">2025 – 그린아트컴퓨터학원 수강</span>
+      </div>
+
+      <div class="label-box">
+        <div class="film-label">CERTIFICATE</div>
+        <p class="desc">2025 – 그린아트컴퓨터학원 수강</p>
+        <p class="desc">2025 – 그린아트컴퓨터학원 수강</p>
+      </div>
+
+      <div class="label-box">
+        <div class="film-label">CAREER</div>
+        <p class="desc">2025 – 그린아트컴퓨터학원 수강</p>
+        <p class="desc">2025 – 그린아트컴퓨터학원 수강</p>
+      </div>
+
+      <div class="label-box">
+        <div class="film-label">SKILLS</div>
+        <p class="desc">2025 – 그린아트컴퓨터학원 수강</p>
+        <p class="desc">2025 – 그린아트컴퓨터학원 수강</p>
+      </div>
+    </section>
+    <script>
+      // 라벨 아래 flicker 라인 애니메이션
+      gsap.utils.toArray(".film-label").forEach((label) => {
+        gsap.to(label.querySelector("::after"), {
+          opacity: 1,
+          duration: 0.2,
+          repeat: -1,
+          yoyo: true,
+          ease: "power2.inOut",
+        });
+      });
+
+      // 라벨 전체 약한 flicker (촬영 중 느낌)
+      gsap.to(".film-label", {
+        opacity: 0.92,
+        repeat: -1,
+        yoyo: true,
+        duration: 0.12,
+        ease: "power2.inOut",
+        stagger: {
+          each: 1.5,
+          from: "random",
+        },
+      });
+      gsap.utils.toArray(".film-label .line").forEach((line) => {
+        gsap.to(line, {
+          opacity: 0.8,
+          duration: 0.2,
+          repeat: -1,
+          yoyo: true,
+          ease: "power2.inOut",
+          stagger: 1,
+        });
+      });
+    </script>
+  </body>
+</html>
