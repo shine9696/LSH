@@ -1,0 +1,840 @@
+@charset "utf-8";
+@font-face {
+  font-family: "오뚜기산스 Light";
+  src: url("../webfont/OttogiSans-Light.woff") format("woff");
+  font-weight: 100 700;
+}
+@font-face {
+  font-family: "오뚜기산스 Medium";
+  src: url("../webfont/OttogiSans-Medium.woff") format("woff");
+  font-weight: 100 700;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+::selection {
+  background: #ffed00;
+}
+.wrap {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.wrap header {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  z-index: 10;
+}
+
+.wrap header .top {
+  width: 90%;
+  max-width: 1750px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrap header .top .logo a {
+  display: block;
+  width: 58px;
+  height: 58px;
+}
+
+.wrap header .top .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*nav 시작*/
+.wrap header .top nav > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+.wrap header .top nav > ul > li > a {
+  word-break: keep-all;
+  font-size: 1.8rem;
+  font-family: "오뚜기산스 Medium";
+  color: #fff;
+}
+.wrap header .top nav > ul > li > a:hover {
+  color: #dc2f34;
+}
+.wrap header .top nav > ul > li .sub {
+  position: absolute;
+  top: 80px;
+  opacity: 0;
+}
+
+.wrap header .top nav > ul li .sub li {
+  margin-top: 20px;
+}
+.wrap header .top nav > ul li .sub li:hover a {
+  color: #000;
+  text-decoration: underline;
+}
+.wrap header .top nav > ul li .sub li a {
+  font-size: 1.4rem;
+  font-family: "오뚜기산스 Light";
+  color: #666;
+}
+
+.wrap header .top nav .hamburger img {
+  cursor: pointer;
+}
+/*topright 시작*/
+.wrap header .top .topright {
+  height: 33px;
+  line-height: 33px;
+  display: flex;
+  gap: 30px;
+}
+.wrap header .top .lang {
+  position: relative;
+  left: -50px;
+}
+.wrap header .top .lang p a::after {
+  content: "▾";
+  font-size: 2rem;
+  padding-left: 10px;
+  text-decoration: none;
+  position: absolute;
+  line-height: 1.5;
+}
+.wrap header .top .lang p a {
+  font-size: 1.6rem;
+  font-family: "오뚜기산스 Medium";
+  color: #fff;
+}
+.wrap header .top .lang_menu {
+  position: absolute;
+  top: 40px;
+  left: -20px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  padding: 5px 25px;
+  box-sizing: border-box;
+  text-align: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+.wrap header .top .lang_menu.on {
+  opacity: 1;
+}
+.wrap header .top .lang_menu a:hover {
+  text-decoration: underline;
+}
+.wrap header .top .lang_menu li:nth-child(1) a {
+  font-size: 1.4rem;
+  font-family: "오뚜기산스 Medium";
+}
+.wrap header .top .lang_menu li:nth-child(2) a {
+  font-size: 1.4rem;
+  font-family: "오뚜기산스 Light";
+}
+.wrap header .top .lang_menu li:nth-child(2) a:hover {
+  font-family: "오뚜기산스 Medium";
+}
+.wrap header .top .topright div:nth-child(4) p {
+  border-radius: 8px;
+  background-color: #fffc29;
+  width: 100px;
+  height: 28px;
+  text-align: center;
+}
+/*header 끝*/
+
+/*swiper 시작*/
+.wrap .section01 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.wrap .section01 .swiper {
+  width: 100%;
+  height: 100%;
+}
+.wrap .section01 .swiper-slide > p {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.wrap .section01 .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wrap .section01 .swiper-slide span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 8rem;
+  font-family: "오뚜기산스 Medium";
+  text-align: center;
+}
+.wrap .section01 .swiper-slide-active span {
+  opacity: 1;
+}
+
+/* 컨트롤 전체 */
+.wrap .section01 .control-bar {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #fff;
+  font-family: "오뚜기산스 Medium";
+  z-index: 20;
+}
+
+/* 숫자 영역 */
+.wrap .section01 .fraction {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.wrap .section01 .fraction .current {
+  font-weight: 900;
+}
+.wrap .section01 .fraction .total {
+  opacity: 0.6;
+}
+
+/* 진행바 (얇은 라인) */
+.wrap .section01 .progress-line {
+  position: relative;
+  width: 200px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+}
+.wrap .section01 .progress-line span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #fff;
+  width: 0%;
+  transition: width 0.8s ease-in-out;
+}
+
+/* 버튼 영역 */
+.wrap .section01 .control-btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.wrap .section01 .control-btn button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.wrap .section01 .control-btn button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+}
+
+.wrap .section01 .material-symbols-outlined {
+  font-size: 22px;
+}
+/*section01 끝*/
+.wrap .section02 {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+.wrap .section02 .scroll {
+  width: 93px;
+  height: 90px;
+  margin: 30px auto;
+}
+
+.wrap .section02 .scroll p img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.wrap .section02 .scroll p:nth-child(2) {
+  width: 16px;
+  height: 18px;
+  position: relative;
+  top: -40%;
+  left: 42%;
+  animation: ani 1s ease-in-out infinite;
+}
+
+@keyframes ani {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.wrap .section02 p:nth-child(2) img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.wrap .section02 h3 {
+  width: 90%;
+  max-width: 1462px;
+  margin: 50px auto;
+  font-family: "오뚜기산스 Medium";
+  font-size: 4.8rem;
+  text-align: center;
+}
+.wrap .section02 .inner {
+  max-width: 1462px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+.wrap .section02 .left {
+  margin-top: 100px;
+  box-sizing: border-box;
+  padding-left: 100px;
+}
+.wrap .section02 svg {
+  width: 450px;
+  height: 500px;
+  animation: bg 3s infinite alternate;
+  clip-path: url(#path1);
+  background-size: cover;
+}
+@keyframes bg {
+  0% {
+    background-image: url(../images/clip1.jpg);
+  }
+  100% {
+    background-image: url(../images/clip1_1.jpg);
+  }
+}
+.wrap .section02 .right {
+  max-width: 554px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 150px;
+  box-sizing: border-box;
+  word-break: keep-all;
+}
+.wrap .section02 .tit {
+  font-size: 5rem;
+  font-family: "오뚜기산스 Medium";
+}
+.wrap .section02 .tit span {
+  color: #ffed00;
+  -webkit-text-stroke: 1px #000;
+}
+.wrap .section02 .txt {
+  font-size: 1.8rem;
+  font-family: "오뚜기산스 Light";
+}
+.wrap .section02 .btn,
+.wrap .section03 .btn {
+  width: 100px;
+  height: 30px;
+}
+.wrap .section02 .btn img,
+.wrap .section03 .btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wrap .section02 .btn:hover,
+.wrap .section03 .btn:hover {
+  animation: anibtn 0.5s linear infinite alternate;
+}
+@keyframes anibtn {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
+.wrap .section02 > .inner02 {
+  flex-direction: row-reverse;
+}
+
+.wrap .section02 > .inner02 .left {
+  margin-top: 100px;
+  box-sizing: border-box;
+  padding-right: 120px;
+}
+
+.wrap .section02 > .inner02 .svg02 {
+  width: 450px;
+  height: 500px;
+  animation: bg2 3s infinite alternate;
+  clip-path: url(#path2);
+  background-size: cover;
+}
+@keyframes bg2 {
+  0% {
+    background-image: url(../images/clip2.jpg);
+  }
+  100% {
+    background-image: url(../images/clip2_1.jpg);
+  }
+}
+.wrap .section02 > .inner02 .right {
+  max-width: 554px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 150px;
+  box-sizing: border-box;
+  word-break: keep-all;
+  padding-left: 100px;
+}
+.wrap .section02 > .inner02 .right02 .tit02 {
+  width: 500px;
+}
+.wrap .section02 > .inner03 .svg03 {
+  width: 450px;
+  height: 500px;
+  animation: bg3 3s infinite alternate;
+  clip-path: url(#path3);
+  background-size: cover;
+}
+@keyframes bg3 {
+  0% {
+    background-image: url(../images/clip3.jpg);
+  }
+  100% {
+    background-image: url(../images/clip3_1.jpg);
+  }
+}
+/*section02 끝*/
+.wrap .section03 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 350px;
+  background-color: #fffdeb;
+  padding: 230px 0 170px;
+  position: relative;
+}
+.wrap .section03 .con {
+  line-height: 1.5;
+}
+.wrap .section03 p:nth-child(1) {
+  font-size: 4.8rem;
+  font-family: "오뚜기산스 Medium";
+}
+.wrap .section03 p:nth-child(2) {
+  font-size: 8rem;
+  font-family: "오뚜기산스 Medium";
+  color: #dc2f34;
+}
+.wrap .section03 p:nth-child(3) {
+  font-size: 2.6em;
+  font-family: "오뚜기산스 Light";
+  padding-top: 30px;
+}
+.wrap .section03 .btn {
+  padding-top: 30px;
+}
+
+.wrap .section03 .showcon {
+  width: 1300px;
+  height: 390px;
+  position: relative;
+}
+.wrap .showcon .global1,
+.wrap .showcon .global2 {
+  position: absolute;
+  top: -100px;
+  left: 30px;
+  overflow: hidden;
+  z-index: 1;
+}
+.wrap .section03 .showcon .global1 img,
+.wrap .section03 .showcon .global2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+.wrap .section03 .showcon .global1 {
+  animation: fadeImg 6s infinite ease-in-out;
+}
+
+.wrap .section03 .showcon .global2 {
+  animation: fadeImg 6s infinite ease-in-out;
+  animation-delay: 3s;
+}
+
+@keyframes fadeImg {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*section03 끝*/
+.wrap .section04 {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 150px;
+}
+.wrap .section04 ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1755px;
+  width: 90%;
+  gap: 20px;
+  padding-top: 150px;
+}
+.wrap .section04 p {
+  font-size: 4.8rem;
+  font-family: "오뚜기산스 Medium";
+}
+.wrap .section04 ul li {
+  width: 830px;
+  height: 550px;
+  background-size: cover;
+  background-position: center;
+  transition: 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.wrap .section04 ul .contit1 {
+  background-image: url(../images/main_esg1.jpg);
+}
+.wrap .section04 ul .contit2 {
+  background-image: url(../images/main_esg2.jpg);
+}
+.wrap .section04 ul .contit3 {
+  background-image: url(../images/main_esg3.jpg);
+}
+
+.section04 ul li.on {
+  width: 1660px;
+}
+.wrap .section04 .tit_box {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  text-align: left;
+  z-index: 2;
+  color: #fff;
+}
+.wrap .section04 .en {
+  font-family: "오뚜기산스 Medium";
+  font-size: 2.4em;
+}
+.wrap .section04 .ko {
+  font-family: "오뚜기산스 Medium";
+  font-size: 4rem;
+}
+
+.wrap .section04 ul li:hover .ko,
+.wrap .section04 ul li.on .ko {
+  font-size: 6.4rem;
+  margin-top: 40px;
+}
+
+.wrap .section04 .desc {
+  font-family: "오뚜기산스 Light";
+  font-size: 2.8rem;
+}
+
+.wrap .section04 ul li .desc,
+.wrap .section04 .btn {
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+.wrap .section04 ul li:hover .desc,
+.wrap .section04 ul li.on .desc {
+  opacity: 1;
+  margin-top: 40px;
+}
+.wrap .section04 ul li:hover .btn,
+.wrap .section04 ul li.on .btn {
+  opacity: 1;
+}
+.wrap .section04 ul li::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: inherit;
+  transition: 0.4s ease;
+  z-index: 0;
+}
+
+.wrap .section04 ul li.on::before,
+.wrap .section04 ul li:hover::before {
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+.wrap .section04 .btn {
+  position: relative;
+  z-index: 2;
+  left: -320px;
+  top: 450px;
+}
+/*section04 끝*/
+.wrap .section05 {
+  width: 100%;
+  padding-top: 220px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.wrap .section05 > p {
+  font-family: "오뚜기산스 Medium";
+  font-size: 4.8rem;
+}
+.wrap .section05 .visual {
+  width: 100%;
+  height: 890px;
+  margin-top: 80px;
+  background-image: url(../images/main_brand_pc.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.wrap .section05 .visual_txt {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wrap .section05 .visual_txt p:nth-child(1) {
+  font-family: "오뚜기산스 Medium";
+  font-size: 18rem;
+  color: #fff;
+  letter-spacing: 27px;
+}
+
+.wrap .section05 .visual_txt p:nth-child(2) {
+  font-family: "오뚜기산스 Medium";
+  font-size: 12rem;
+  color: #ffed00;
+  letter-spacing: 10px;
+}
+.wrap .section05 .visual_txt p:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  width: 440px;
+  height: 2px;
+  background-color: #ffed00;
+  left: 82%;
+  top: 79%;
+}
+.wrap .section05 .visual_txt p:nth-child(3) {
+  font-family: "오뚜기산스 Medium";
+  font-size: 5rem;
+  color: #ffed00;
+  position: absolute;
+  right: 340px;
+  top: 555px;
+}
+.wrap .section05 .visual_txt p:nth-child(4) {
+  font-family: "오뚜기산스 Medium";
+  font-size: 1.8rem;
+  color: #fff;
+  position: absolute;
+  right: 340px;
+  top: 655px;
+}
+.wrap .section05 .visual_txt p:nth-child(5) {
+  position: absolute;
+  right: 340px;
+  top: 755px;
+}
+/*section05 끝*/
+footer {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 200px;
+  text-align: center;
+}
+footer > ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 20px;
+}
+footer .foot_wrap {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50p;
+}
+footer .foot_list {
+  display: flex;
+  text-align: left;
+  gap: 100px;
+  margin-left: -300px;
+}
+.foot_list ul li + li {
+  margin-top: 20px;
+}
+footer .foot_list > ul li:nth-child(1) {
+  font-family: "오뚜기산스 Medium";
+  font-size: 2.4rem;
+}
+footer .foot_list > ul li a {
+  font-family: "오뚜기산스 Light";
+  font-size: 1.6rem;
+}
+footer .foot_list > ul li a:hover {
+  text-decoration: underline;
+}
+footer .foot_number {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+footer .foot_number dl {
+  display: flex;
+  text-align: left;
+  margin-top: 15px;
+}
+
+footer .foot_number dt {
+  font-family: "오뚜기산스 Light";
+  font-size: 1.5rem;
+  color: #666;
+}
+footer .foot_number dd {
+  font-family: "오뚜기산스 Medium";
+  font-size: 1.8rem;
+  color: #000;
+  padding-left: 10px;
+}
+footer .foot_number dl:first-of-type dd {
+  padding-left: 38px;
+}
+footer .foot_number span {
+  font-family: "오뚜기산스 Light";
+  font-size: 1.3rem;
+  color: #666;
+}
+.wrap footer .foot_icon {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  position: relative;
+  top: -100px;
+}
+
+.wrap footer .foot_icon ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.wrap footer .foot_icon ul li:nth-child(4) p img {
+  width: 140px;
+  object-fit: cover;
+}
+
+.wrap footer > p {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  top: -100px;
+  font-family: "오뚜기산스 Light";
+  font-size: 1.2rem;
+  color: #666666;
+  margin-top: 10px;
+}
+
+.wrap .btn_top a {
+  width: 80px;
+  height: 72px;
+  position: fixed;
+  background-image: url(../images/btn_top.png);
+  right: 10px;
+  bottom: 10px;
+}
+
+.wrap .btn_top {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.wrap .btn_top.on {
+  opacity: 1;
+  visibility: visible;
+}
