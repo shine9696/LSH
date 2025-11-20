@@ -50,7 +50,7 @@ a {
 }
 body {
   /* overflow-x: hidden; */
-  background-color: #0b0f14;
+  background-color: #0f0f10;
   /* 전체 페이지 가로 스크롤 차단 */
 }
 .gnb-wrap {
@@ -280,18 +280,25 @@ header .top nav ul li {
 /*landing 끝*/
 
 .section01 {
-  width: 90%;
-  max-width: 1920px;
-  height: 100vh;
-  margin: 0 auto;
-  background-color: #0b0f14;
+  width: 100vw;
+  margin-left: calc(50% - 50vw); /* 화면 기준으로 왼쪽 끝에 붙이고 */
+  margin-right: calc(50% - 50vw); /* 오른쪽도 맞춰줌 */
+  background-color: #0f0f10;
   position: relative;
+  display: flex;
+}
+.section01 .left-area {
+  width: 25%;
+  background-color: #17171a;
+  padding: 60px 40px;
 }
 
 .section01 .tit {
-  position: relative;
-  display: flex;
-  justify-content: flex-start;
+  position: absolute;
+  top: 0;
+  left: 5vw;
+  /* display: flex; */
+  /* justify-content: flex-start; */
   color: #fff;
   font-family: "playfair Display";
   font-size: 3vw;
@@ -315,7 +322,7 @@ header .top nav ul li {
 .section01 .tit::after {
   content: "";
   position: absolute;
-  left: 200px;
+  left: 190px;
   bottom: -5px;
   width: 20px;
   height: 20px;
@@ -324,32 +331,22 @@ header .top nav ul li {
 }
 .section01 .img {
   border: 1px solid #fff;
+  border-radius: 70%;
   width: 200px;
   height: 250px;
-  position: relative;
-  top: 100px;
+  position: absolute;
+  top: 13vw;
+  left: 7vw;
 }
-.section01 .contact {
-  width: 15.5vw;
-  position: relative;
-  top: 15vh;
-  left: 5px;
-  color: #fff;
-  font-family: "playfair Display";
-  font-weight: 800;
-  font-size: 1vw;
-  letter-spacing: 1px;
-  padding-bottom: 0.5vw;
-  border-bottom: 1px solid #d9c27a;
-}
+
 .section01 .info {
   display: flex;
   flex-direction: column;
   gap: 0.7vw;
   position: relative;
-  top: 190px;
-  left: 5px;
-  font-size: 0.8vw;
+  top: 29vw;
+  left: 3vw;
+  font-size: 0.9vw;
   color: #fff;
   font-family: "NotoSerif";
 }
@@ -369,85 +366,75 @@ header .top nav ul li {
   top: -2vw;
 }
 
-.section01 .keywords {
-  width: 15.5vw;
-  color: #fff;
-  font-size: 1vw;
-  font-family: "playfair Display";
-  position: relative;
-  top: 11vw;
-  left: 5px;
-  padding-bottom: 0.5vw;
-  border-bottom: 1px solid #d9c27a;
-}
-.section01 .words1 {
-  display: flex;
-  gap: 1vw;
-  position: relative;
-  top: 12vw;
-  left: 5px;
-  color: #fff;
-  font-size: 0.8vw;
-}
-.section01 .words2 {
-  display: flex;
-  gap: 1vw;
-  position: relative;
-  top: 12vw;
-  left: 5px;
-  color: #fff;
-  font-size: 0.8vw;
+.section01 .right-area {
+  width: 65%;
+  margin: 13vw;
+  background-color: #0f0f10;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 6vw 15vw;
 }
 
-.section01 .line {
-  position: absolute;
-  left: 30vw; /* 오른쪽 끝에 배치 */
-  top: 12vw; /* 위에서 얼마나 띄울지 */
-  width: 1px; /* 선 두께 */
-  height: 70%; /* 세로 길이 */
-  background: #cbb176;
+/* 각 섹션(li) 기본 스타일 */
+.section01 .right-area > ul {
+  display: contents; /* <ul> 자체는 레이아웃 영향 제외 */
 }
 
-.section01 ul {
-  width: 90%;
+.section01 .right-area > ul > li {
   color: #fff;
-  position: relative;
-  left: 20vw;
-  top: -10.5vw;
 }
-.section01 li {
-  position: relative;
-  left: 50px;
-  top: 50px;
-}
-.section01 li .title {
+
+/* 타이틀 스타일 */
+.section01 .right-area .title {
   font-family: "playfair Display";
   font-size: 1.8vw;
   font-weight: 600;
-  margin-bottom: 10px;
-  background-color: #f5f5f5;
-  color: #0b0f14;
+  margin-bottom: 15px;
   display: inline-block;
+  color: #ffffff;
+  letter-spacing: 0.05vw;
   position: relative;
-  top: -13vw;
-  left: 15vw;
 }
-.section01 .detail1 li {
+.section01 .right-area .title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 150%;
+  border: 1px solid #5a5a5c;
+}
+.section01 .right-area .title::after 
+/* 상세 텍스트 */
+.section01 .right-area li ul li {
   font-family: "NotoSerif";
+  font-size: 0.9vw;
+  /* margin-bottom: 0.7vw; */
   color: #f5f5f5;
-  position: relative;
-  top: -2vw;
-  left: -5vw;
 }
-.section01 li:nth-child(2) .title {
-  position: relative;
-  top: -20.8vw;
-  left: 55vw;
+.section01 .right-area .words {
+  display: flex;
+  flex-wrap: wrap; /* 자동 줄바꿈 */
+  gap: 1vw 1.2vw; /* 위아래, 좌우 간격 */
+  max-width: 40vw; /* 3개만 들어가도록 폭 제한 */
 }
-.section01 .detail2 li {
+
+.section01 .right-area .words li {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3vw 1vw;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 0.8vw;
   font-family: "NotoSerif";
-  color: #f5f5f5;
-  position: relative;
-  top: -9.5vw;
-  left: 35vw;
+  white-space: nowrap; /* 텍스트 줄바꿈 X */
+}
+
+/* SKILLS 아이콘 정렬 */
+.section01 .detail4 {
+  display: grid;
+  grid-template-columns: repeat(4, 30px);
+  gap: 2vw 3vw;
 }
