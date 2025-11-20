@@ -24,13 +24,23 @@
   font-weight: 100 900;
   font-style: italic;
 }
+@font-face {
+  font-family: "Pretendard";
+  src: url(../webfont/PretendardVariable.woff2) format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NotoSerif";
+  src: url(../webfont/NotoSerifKR-VariableFont_wght.woff) format("woff");
+  font-weight: 100 900;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
 }
-html {
-  font-size: 62.5%;
-}
+
 ul {
   list-style: none;
 }
@@ -39,8 +49,8 @@ a {
   color: #fff;
 }
 body {
-  background-color: #0f0f0f;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+  background-color: #0b0f14;
   /* 전체 페이지 가로 스크롤 차단 */
 }
 .gnb-wrap {
@@ -54,7 +64,7 @@ body {
   gap: 3vw;
   font-family: "DMSerif Display";
   font-style: italic;
-  font-size: 2.5rem;
+  font-size: 1.3vw;
   color: #fff;
 }
 
@@ -70,7 +80,7 @@ body {
   gap: 3vw;
   font-family: "DMSerif Display";
   font-style: italic;
-  font-size: 2.5rem;
+  font-size: 1.3vw;
   color: #fff;
 }
 
@@ -133,7 +143,7 @@ header .top {
 }
 header .top > p {
   font-family: "playfair Display";
-  font-size: 2rem;
+  font-size: 1.5vw;
   color: #fff;
 }
 
@@ -200,7 +210,7 @@ header .top nav ul {
   gap: 3vw;
   font-family: "DMSerif Display";
   font-style: italic;
-  font-size: 2.5rem;
+  font-size: 1.3vw;
 }
 header .top nav ul li {
   cursor: pointer;
@@ -215,7 +225,7 @@ header .top nav ul li {
   font-family: "playfair Display";
 }
 .main p:nth-child(1) {
-  font-size: 12rem;
+  font-size: 6vw;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 25px;
@@ -226,7 +236,7 @@ header .top nav ul li {
   justify-content: center;
   padding-top: 1vw;
   font-family: "playfair Display";
-  font-size: 1.5rem;
+  font-size: 1vw;
   color: #d3d3d3;
 }
 .landing_line {
@@ -274,6 +284,8 @@ header .top nav ul li {
   max-width: 1920px;
   height: 100vh;
   margin: 0 auto;
+  background-color: #0b0f14;
+  position: relative;
 }
 
 .section01 .tit {
@@ -282,8 +294,8 @@ header .top nav ul li {
   justify-content: flex-start;
   color: #fff;
   font-family: "playfair Display";
-  font-size: 4rem;
-  padding-top: 5vw;
+  font-size: 3vw;
+  padding-top: 3vw;
   letter-spacing: 2px;
 }
 
@@ -292,23 +304,23 @@ header .top nav ul li {
   content: "";
   position: absolute;
   left: -15px;
-  top: 5vw;
+  top: 3vw;
   width: 20px; /* 선 길이 */
   height: 20px;
-  border-left: 1px solid rgba(255, 255, 255, 0.6);
-  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  border-left: 1px solid;
+  border-top: 3px solid;
 }
 
 /* 오른쪽 하단 */
 .section01 .tit::after {
   content: "";
   position: absolute;
-  left: 210px;
+  left: 200px;
   bottom: -5px;
   width: 20px;
   height: 20px;
-  border-right: 1px solid rgba(255, 255, 255, 0.6);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  border-right: 3px solid;
+  border-bottom: 1px solid;
 }
 .section01 .img {
   border: 1px solid #fff;
@@ -317,55 +329,125 @@ header .top nav ul li {
   position: relative;
   top: 100px;
 }
-.section01 .profile {
-  width: 90%;
+.section01 .contact {
+  width: 15.5vw;
   position: relative;
   top: 15vh;
   left: 5px;
-  text-decoration: underline;
-  text-underline-offset: 10px;
-  color: #6e6e6e;
-}
-.section01 .name {
-  color: #fff;
-  font-size: 2rem;
-  letter-spacing: 5px;
-  padding-right: 5px;
-}
-.section01 .name_e {
   color: #fff;
   font-family: "playfair Display";
-  font-weight: 100;
-  font-size: 1.3rem;
+  font-weight: 800;
+  font-size: 1vw;
   letter-spacing: 1px;
+  padding-bottom: 0.5vw;
+  border-bottom: 1px solid #d9c27a;
 }
 .section01 .info {
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 0.7vw;
   position: relative;
-  top: 180px;
+  top: 190px;
   left: 5px;
-  font-size: 1.6em;
+  font-size: 0.8vw;
   color: #fff;
+  font-family: "NotoSerif";
 }
-.section01 .keyword {
+.section01 .info .name,
+.section01 .info .birth {
+  display: flex;
+  gap: 3vw;
+  position: relative;
+  top: -2vw;
+}
+
+.section01 .info .email,
+.section01 .info .phone {
+  display: flex;
+  gap: 2.5vw;
+  position: relative;
+  top: -2vw;
+}
+
+.section01 .keywords {
+  width: 15.5vw;
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1vw;
   font-family: "playfair Display";
   position: relative;
-  top: 250px;
+  top: 11vw;
   left: 5px;
-  padding-top: 20px;
+  padding-bottom: 0.5vw;
+  border-bottom: 1px solid #d9c27a;
 }
-.section01 .keywords {
+.section01 .words1 {
   display: flex;
-  gap: 20px;
-  padding-top: 10px;
+  gap: 1vw;
+  position: relative;
+  top: 12vw;
+  left: 5px;
+  color: #fff;
+  font-size: 0.8vw;
 }
-.section01 .keywords2 {
+.section01 .words2 {
   display: flex;
-  gap: 20px;
+  gap: 1vw;
+  position: relative;
+  top: 12vw;
+  left: 5px;
+  color: #fff;
+  font-size: 0.8vw;
 }
-.section01 .keywords > p:nth-child(1) {
+
+.section01 .line {
+  position: absolute;
+  left: 30vw; /* 오른쪽 끝에 배치 */
+  top: 12vw; /* 위에서 얼마나 띄울지 */
+  width: 1px; /* 선 두께 */
+  height: 70%; /* 세로 길이 */
+  background: #cbb176;
+}
+
+.section01 ul {
+  width: 90%;
+  color: #fff;
+  position: relative;
+  left: 20vw;
+  top: -10.5vw;
+}
+.section01 li {
+  position: relative;
+  left: 50px;
+  top: 50px;
+}
+.section01 li .title {
+  font-family: "playfair Display";
+  font-size: 1.8vw;
+  font-weight: 600;
+  margin-bottom: 10px;
+  background-color: #f5f5f5;
+  color: #0b0f14;
+  display: inline-block;
+  position: relative;
+  top: -13vw;
+  left: 15vw;
+}
+.section01 .detail1 li {
+  font-family: "NotoSerif";
+  color: #f5f5f5;
+  position: relative;
+  top: -2vw;
+  left: -5vw;
+}
+.section01 li:nth-child(2) .title {
+  position: relative;
+  top: -20.8vw;
+  left: 55vw;
+}
+.section01 .detail2 li {
+  font-family: "NotoSerif";
+  color: #f5f5f5;
+  position: relative;
+  top: -9.5vw;
+  left: 35vw;
 }
