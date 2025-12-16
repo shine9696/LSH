@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      ul {
+        list-style: none;
+      }
+      .wrap {
+        max-width: 1905px;
+        width: 100%;
+        margin: 0 auto;
+      }
+      .menu {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid #e5e5e5;
+      }
+      .menu ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        max-width: 1500px;
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .menu ul li {
+        position: relative;
+        flex: 1 1 0;
+      }
+      .menu ul li a {
+        font-size: 16px;
+        font-weight: 600;
+        padding: 10px;
+        transition: 0.3s;
+      }
+      .menu ul li a::after {
+        content: "";
+        position: absolute;
+        left: 150px;
+        bottom: -30px;
+        width: 100%;
+        height: 3px;
+        background: #000;
+        transform: translateX(-50%) scaleX(0);
+        transform-origin: center;
+        transition: all ease 0.35s;
+        opacity: 0;
+      }
+      .menu ul li:hover a::after {
+        transform: translateX(-50%) scaleX(1);
+        opacity: 1;
+        background: #000;
+      }
+      .menu ul li.on a {
+        color: #ea002c;
+      }
+      .menu ul li.on a::after {
+        transform: translateX(-50%) scaleX(1);
+        opacity: 1;
+        background: #ea002c;
+      }
+      .con {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 140px;
+      }
+      .con h3 {
+        font-size: 50px;
+      }
+      .con .item {
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+        gap: 20px;
+      }
+      .con .item p a {
+        font-size: 20px;
+        color: #666666;
+        font-weight: 600;
+        padding: 0 10px;
+      }
+      .con .item p {
+        position: relative;
+      }
+      .con .item p a::before {
+        content: "";
+        position: absolute;
+        right: -13px;
+        top: 13px;
+        border-radius: 50%;
+        background: #ccc;
+        width: 4px;
+        height: 4px;
+      }
+      .con .item p:first-child a {
+        color: #ea002c;
+      }
+      .con .item p:nth-child(3) a::before,
+      .con .item .txt a::before {
+        display: none;
+      }
+      .con {
+        display: none;
+      }
+      .con.on {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="menu">
+        <ul>
+          <li><a href="#">아동복지사업</a></li>
+          <li><a href="#">청소년복지사업</a></li>
+          <li><a href="#">노인복지사업</a></li>
+          <li><a href="#">장애인복지사업</a></li>
+          <li><a href="#">사회봉사사업</a></li>
+        </ul>
+      </div>
+      <div class="con1 con">
+        <h3>아동복지사업</h3>
+        <div class="item">
+          <p><a href="#">지역아동센터사업</a></p>
+          <p><a href="#">우리동네키움센터사업</a></p>
+          <p><a href="#">어린이집사업</a></p>
+        </div>
+      </div>
+      <div class="con2 con">
+        <h3>청소년복지사업</h3>
+        <div class="item">
+          <p><a href="#">청소년복지시설사업</a></p>
+          <p class="txt"><a href="#">웰컴투모로우사업</a></p>
+        </div>
+      </div>
+      <div class="con3 con">
+        <h3>노인복지사업</h3>
+        <div class="item">
+          <p><a href="#">행복빨래방사업</a></p>
+          <p class="txt"><a href="#">주거환경개선사업</a></p>
+        </div>
+      </div>
+      <div class="con4 con">
+        <h3>장애인복지사업</h3>
+      </div>
+      <div class="con5 con">
+        <h3>사회봉사사업</h3>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuItems = document.querySelectorAll(".menu ul li");
+        const sections = document.querySelectorAll(".con");
+
+        sections.forEach((c) => c.classList.remove("on"));
+        document.querySelector(".con1").classList.add("on");
+        menuItems[0].classList.add("on");
+
+        menuItems.forEach((li, index) => {
+          li.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            sections.forEach((c) => c.classList.remove("on"));
+            document.querySelector(`.con${index + 1}`).classList.add("on");
+
+            menuItems.forEach((item) => item.classList.remove("on"));
+            li.classList.add("on");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

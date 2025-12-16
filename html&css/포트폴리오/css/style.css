@@ -1,0 +1,356 @@
+@charset "utf-8";
+@font-face {
+  font-family: "Pretendard";
+  src: url(../webfont/PretendardVariable.woff2) format("woff2");
+  font-weight: 100 900;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url(../webfont/iJWKBXyIfDnIV7nBrXw.woff2) format("woff2");
+  font-weight: 100 900;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+#wrap {
+  max-width: 1920px;
+  width: 95%;
+  margin: 0 auto;
+}
+#wrap header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  line-height: 105px;
+  z-index: 10;
+}
+#wrap nav {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+#wrap nav > p {
+  margin-right: auto;
+  width: 103px;
+}
+#wrap nav > p img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#wrap nav .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  gap: 50px;
+}
+
+#wrap nav > ul.menu li a {
+  font-family: "Rubik";
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: 600;
+}
+#wrap nav > ul.right li:first-child a {
+  background: #eaeaea;
+  padding: 5px 10px;
+  border-radius: 100px;
+  font-family: "Rubik";
+  font-size: 0.8vw;
+  font-weight: 600;
+}
+#wrap nav .right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+#wrap nav .right li:nth-child(2) p {
+  width: 35px;
+}
+#wrap nav .right li a img {
+  width: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+#wrap nav .right .ham-menu {
+  display: none;
+}
+#wrap nav .right .ham-menu img {
+  width: 31px;
+  object-fit: cover;
+}
+/*swiper 시작 */
+#wrap .visual {
+  max-width: 1797px;
+  width: 100%;
+  padding-top: 120px;
+  --swiper-navigation-size: 35px;
+}
+#wrap .visual .swiper {
+  width: 100%;
+}
+#wrap .visual .swiper,
+#wrap .visual .swiper-wrapper,
+#wrap .visual .swiper-slide {
+  height: 100%;
+}
+#wrap .visual .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  backface-visibility: hidden;
+}
+#wrap .visual .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+  display: block;
+}
+
+#wrap .visual .swiper-slide h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  font-family: "Rubik";
+  font-size: 3vw;
+}
+
+#wrap .visual .swiper-slide span {
+  font-family: "Pretendard";
+  font-size: 6vw;
+  white-space: nowrap;
+}
+
+#wrap .visual .swiper-button-next::after,
+#wrap .visual .swiper-button-prev::after {
+  color: #fff;
+}
+#wrap .visual h1 {
+  font-size: 3vw;
+  text-align: center;
+}
+
+#wrap .row1 {
+  aspect-ratio: 1 / 0.24;
+  margin: 20px 0;
+  display: flex;
+  gap: 20px;
+}
+#wrap .row1 li {
+  border-radius: 25px;
+  padding: 20px;
+  background-size: 100%;
+  background-position: 0 0;
+  flex: 1;
+}
+#wrap .row1 li a {
+  color: #fff;
+  font-family: "Rubik";
+  font-weight: bold;
+  font-size: 34px;
+}
+#wrap .row1 li:nth-child(1) {
+  background-image: url(https://spc.co.kr/img/front/main/history.webp);
+}
+#wrap .row1 li:nth-child(2) {
+  background-image: url(https://spc.co.kr/img/front/main/spcway.webp);
+  flex: 2;
+}
+#wrap .row1 li:nth-child(3) {
+  background-image: url(https://spc.co.kr/img/front/main/together.webp);
+}
+#wrap .row2 > li a {
+  color: #fff;
+  font-family: "Rubik";
+  font-weight: bold;
+}
+#wrap .row2 > li:nth-child(n + 2) a {
+  font-size: 34px;
+}
+#wrap .row2 > li:first-child a {
+  font-size: 146px;
+  text-align: center;
+}
+#wrap .row2,
+#wrap .row3 {
+  aspect-ratio: 1 / 0.48;
+  display: flex;
+  gap: 20px;
+}
+
+#wrap .row2 > li,
+#wrap .row3 > li {
+  flex: 1;
+}
+#wrap .row2 > li:first-child,
+#wrap .row3 > li:first-child {
+  border-radius: 25px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#wrap .row2 > li:first-child {
+  background-image: url(https://spc.co.kr/img/front/main/eat.webp);
+}
+#wrap .row3 > li:first-child {
+  background-image: url(https://spc.co.kr/img/front/main/news.webp);
+}
+#wrap .row2 > li:last-child ul,
+#wrap .row3 > li:last-child ul {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  height: 100%;
+}
+#wrap .row2 > li:last-child ul li,
+#wrap .row3 > li:last-child ul li {
+  flex: 1 1 40%;
+  border-radius: 25px;
+  background-size: cover;
+  background-position: 0 0;
+  padding: 20px;
+}
+#wrap .row2 > li:last-child ul li {
+  background-size: 110%;
+  background-position: center;
+  transition: 1s;
+}
+#wrap .row2 > li:last-child ul li:hover {
+  background-size: 130%;
+}
+
+#wrap .row2 > li:last-child ul li:nth-child(1),
+#wrap .row3 > li:last-child ul li:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#wrap .row2 > li:last-child ul li:nth-child(2) {
+  background-image: url(https://spc.co.kr/files/brand/2024/06/2702a0a8-0b1e-42f7-a055-bd6749696c7c.png);
+}
+#wrap .row2 > li:last-child ul li:nth-child(3) {
+  background-image: url(https://spc.co.kr/files/brand/2024/06/d96a9ce4-a1a7-42a1-836f-fa4580f21f58.jpg);
+}
+#wrap .row2 > li:last-child ul li:nth-child(4) {
+  background-image: url(https://spc.co.kr/files/brand/2024/06/b59cd9b1-6acb-4deb-8d6a-7999988968bb.jpg);
+}
+#wrap .row3 > li:last-child ul li:nth-child(2) {
+  background-image: url(https://spc.co.kr/files/now/news/kor/2025/05/522d2804-bd2d-4592-80d4-fa2609abc630.jpg);
+}
+#wrap .row3 > li:last-child ul li:nth-child(3) {
+  background-image: url(https://spc.co.kr/files/now/news/kor/2025/05/aaefffc6-7c6c-4ade-b1d5-5f31d4dfe2a7.jpg);
+}
+#wrap .row3 > li:last-child ul li:nth-child(4) {
+  background-image: url(https://spc.co.kr/files/now/news/kor/2025/05/c54b5d3b-d810-4838-b977-e6478c64e097.jpg);
+}
+#wrap .row3 {
+  padding: 20px 0;
+  flex-direction: row-reverse;
+}
+#wrap .row3 > li:nth-child(2) ul {
+  flex-direction: row-reverse;
+}
+#wrap .row2 > li:last-child ul li a,
+#wrap .row3 > li:last-child ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#wrap .row4 li:first-child {
+  background-image: url(https://spc.co.kr/img/front/main/careers.webp);
+}
+#wrap .row4 li:nth-child(2) {
+  background-image: url(https://spc.co.kr/img/front/main/contact.webp);
+}
+#wrap .row4 {
+  display: flex;
+  aspect-ratio: 1 / 0.24;
+  gap: 20px;
+}
+#wrap .row4 li {
+  flex: 1;
+  background-position: 0 0;
+  background-size: cover;
+  border-radius: 50px;
+}
+@media (max-width: 1450px) {
+  #wrap nav > ul.menu li a {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 1350px) {
+  #wrap nav > ul.menu li a {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 1260px) {
+  #wrap nav > p {
+    width: 74px;
+    margin-right: 0;
+  }
+  #wrap nav .menu {
+    gap: 30px;
+  }
+  #wrap nav > ul.menu li a {
+    font-size: 1.1rem;
+  }
+  #wrap nav .right {
+    gap: 20px;
+  }
+  #wrap nav .right li:nth-child(2) p {
+    width: 25px;
+  }
+}
+@media (max-width: 1150px) {
+  #wrap nav .menu {
+    gap: 30px;
+  }
+}
+@media (max-width: 1020px) {
+  #wrap nav > p {
+    margin-left: 20px;
+  }
+  #wrap nav .menu,
+  #wrap nav .right li:first-child,
+  #wrap nav .right li:nth-child(2) {
+    display: none;
+  }
+  #wrap nav .right {
+    margin-left: auto;
+  }
+  #wrap nav .right .ham-menu {
+    display: block;
+  }
+  #wrap .visual .swiper {
+    display: none;
+  }
+}
+@media (max-width: 760px) {
+  #wrap header {
+    line-height: 80px;
+  }
+}
+@media (max-width: 500px) {
+  #wrap nav .right .ham-menu img {
+    width: 24px;
+  }
+}

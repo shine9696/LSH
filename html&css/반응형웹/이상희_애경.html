@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      ul {
+        list-style: none;
+      }
+      .wrap {
+        max-width: 1400px;
+        width: 100%;
+        margin: 0 auto;
+      }
+      .con {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 100px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+      .con h2 {
+        font-size: 46px;
+        text-transform: uppercase;
+        letter-spacing: -2px;
+      }
+      .menu {
+        display: flex;
+        gap: 40px;
+      }
+      .menu p {
+        text-align: right;
+        color: rgba(22, 22, 22, 0.6);
+      }
+
+      .menu .txt {
+        font-size: 20px;
+        font-weight: 700;
+        color: #000;
+      }
+      .menu .txt.active {
+        text-decoration: underline;
+      }
+      .item1,
+      .item2,
+      .item3 {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 50px;
+      }
+      .item2,
+      .item3 {
+        display: none;
+      }
+      .left {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+      }
+      .left p {
+        font-size: 20px;
+        font-weight: 500;
+      }
+      .left p:nth-child(2) a {
+        display: inline-flex;
+        align-items: center;
+        gap: 15px;
+        padding: 10px 22px;
+        border-radius: 24px;
+        background: rgba(248, 248, 248, 0.9);
+        border: 1px solid none;
+        font-size: 14px;
+        color: #000;
+        text-decoration: none;
+      }
+      .left p:nth-child(2) a:hover {
+        background-image: linear-gradient(to top, #f5e7f0, #fad7d7) !important;
+      }
+      .right p {
+        border-radius: 5px;
+        overflow: hidden;
+        width: 900px;
+        height: 620px;
+      }
+      .right p img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="con">
+        <h2>
+          Sustainable<br />
+          Love & Respect
+        </h2>
+        <div class="menu">
+          <p>
+            <a
+              href="
+              #"
+              >Environmental<br /><span class="txt">환경</span></a
+            >
+          </p>
+          <p>
+            <a href="#">Social<br /><span class="txt">사회</span></a>
+          </p>
+
+          <p>
+            <a href="#">Governance<br /><span class="txt">지배구조</span></a>
+          </p>
+        </div>
+      </div>
+
+      <div class="item1">
+        <div class="left">
+          <p>
+            애경산업은 지속가능한 환경을 위해<br />
+            책임을 다하겠습니다.
+          </p>
+          <p>
+            <a href="#">
+              바로가기
+              <img
+                src="	https://www.aekyung.co.kr/img/front/sub/sustainable/report/arrow_link.webp"
+                alt="icon"
+              />
+            </a>
+          </p>
+        </div>
+        <div class="right">
+          <p>
+            <img
+              src="	https://www.aekyung.co.kr/img/front/main/mo_main_tab01.png"
+              alt="img"
+            />
+          </p>
+        </div>
+      </div>
+      <div class="item2">
+        <div class="left">
+          <p>
+            애경산업의 노력은<br />
+            임직원과 협력사, 지역사회<br />
+            그리고 고객이 함께하는 향기로운 동행이 될 것입니다.
+          </p>
+          <p>
+            <a href="#">
+              바로가기
+              <img
+                src="	https://www.aekyung.co.kr/img/front/sub/sustainable/report/arrow_link.webp"
+                alt="icon"
+              />
+            </a>
+          </p>
+        </div>
+        <div class="right">
+          <p>
+            <img
+              src="https://www.aekyung.co.kr/img/front/main/mo_main_tab02.png"
+              alt="img"
+            />
+          </p>
+        </div>
+      </div>
+      <div class="item3">
+        <div class="left">
+          <p>투명하고 건전한 기업 활동을 이어나가겠습니다.</p>
+          <p>
+            <a href="#">
+              바로가기
+              <img
+                src="	https://www.aekyung.co.kr/img/front/sub/sustainable/report/arrow_link.webp"
+                alt="icon"
+              />
+            </a>
+          </p>
+        </div>
+        <div class="right">
+          <p>
+            <img
+              src="https://www.aekyung.co.kr/img/front/main/mo_main_tab03.png"
+              alt="img"
+            />
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuLinks = document.querySelectorAll(".menu p a");
+        const items = {
+          item1: document.querySelector(".item1"),
+          item2: document.querySelector(".item2"),
+          item3: document.querySelector(".item3"),
+        };
+
+        items.item1.style.display = "flex";
+        items.item2.style.display = "none";
+        items.item3.style.display = "none";
+
+        document
+          .querySelector(".menu p:first-child .txt")
+          .classList.add("active");
+
+        menuLinks.forEach((link, index) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            document.querySelectorAll(".menu .txt").forEach((txt) => {
+              txt.classList.remove("active");
+            });
+
+            this.querySelector(".txt").classList.add("active");
+
+            items.item1.style.display = "none";
+            items.item2.style.display = "none";
+            items.item3.style.display = "none";
+
+            if (index === 0) items.item1.style.display = "flex";
+            if (index === 1) items.item2.style.display = "flex";
+            if (index === 2) items.item3.style.display = "flex";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
